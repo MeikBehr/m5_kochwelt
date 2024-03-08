@@ -9,6 +9,7 @@
 
 :root {
     --green: #008000;
+    --buttonColor: #ffffff;
     --grey_dark: #efefef;
     --footer_background: #403b3b;
     --fontColorMain: #000000;
@@ -50,10 +51,11 @@ body {
     width: 100%;
     font-family: "Raleway", sans-serif;
     font-size: var(--fontSizeMain);
-    line-height: calc(var(--fontSizeMain) * 0.125);
+    line-height: calc(var(--fontSizeMain) * 1.125);
     overflow: visible;
     direction: ltr;
     background-color: var(--backgroundColorMain);
+
 }
 
 
@@ -95,12 +97,12 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-left: var(--marginLRContent);
 }
 
 
 .header__logo {
     width: 12.5rem;
-    margin-left: var(--marginLRContent);
 }
 
 
@@ -110,10 +112,10 @@ a {
     display: flex;
     align-items: end;
     font-size: var(--fontSizeHeader);
-    line-height: calc(var(--fontSizeMain) * 0.125);
+    line-height: calc(var(--fontSizeMain) * 1.125);
     font-weight: 600;
     gap: 1rem;
-    margin-right: 5rem;
+    margin-right: var(--marginLRContent);
     margin-bottom: 2rem;
     color: var(--fontColorHeader);
 }
@@ -124,4 +126,78 @@ a {
     color: var(--fontColorHover);
     border-bottom: 4px solid var(--fontColorHover);
 }
+
+.main__FirstSection,
+.main__ThirdSection {
+    margin-left: var(--marginLRContent);
+    margin-right: var(--marginLRContent);
+}
+
+
+.main__FirstSection,
+.main__SecondSection,
+.main__ThirdSection {
+    display: flex;
+    justify-content: space-between;
+    min-width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+
+}
+
+.main__SecondSection {
+    background-color: var(--grey_dark);
+}
+
+
+.main__FirstSection__image > img,
+.main__SecondSection__image > img,
+.main__ThirdSection__image > img{
+    width: 20rem;
+    border-radius: var(--borderRadius);
+}
+
+
+.main__SecondSection__image {
+    margin-left: var(--marginLRContent);
+}
+
+
+.main__FirstSection__article,
+.main__SecondSection__article,
+.main__ThirdSection__article {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    padding-left: 2rem;
+}
+
+
+.main__FirstSection__article,
+.main__SecondSection__article,
+.main__ThirdSection__article {
+    margin-right: var(--marginLRContent);
+}
+
+
+.main__FirstSection__article > p,
+.main__SecondSection__article > p,
+.main__ThirdSection__article > p {
+    word-wrap: break-word;
+    white-space: normal;
+    padding-top: 1rem;
+}
+
+
+
+.main__button {
+    margin-top: 2rem;
+    padding: 0.5rem 3rem;
+    background-color: var(--green);
+    border: none;
+    color: var(--buttonColor);
+}
+
+
 
