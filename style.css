@@ -6,6 +6,23 @@
     src: url(./fonts/Raleway-VariableFont_wght.ttf) format("truetype");
 }
 
+
+:root {
+    --green: #008000;
+    --grey_dark: #efefef;
+    --footer_background: #403b3b;
+    --fontColorMain: #000000;
+    --fontColorHeader: #403B3B;
+    --fontColorHover: #008000;
+    --backgroundColorMain: #ffffff;
+    --borderRadius: 0.625rem;
+    --fontSizeMain: 1rem;
+    --fontSizeHeadlin: 1.5rem;
+    --fontSizeHeader: 1.125rem;
+    --marginLRContent: 4rem;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -21,12 +38,88 @@
 
 
 html {
+    color-scheme: light;
     font-size: 100%;
     scroll-behavior: smooth;
     display: inline-block;
+}
+
+
+body {
+    min-height: 100dvh;
+    width: 100%;
     font-family: "Raleway", sans-serif;
+    font-size: var(--fontSizeMain);
+    line-height: calc(var(--fontSizeMain) * 0.125);
+    overflow: visible;
+    direction: ltr;
+    background-color: var(--backgroundColorMain);
 }
 
 
 
+.mainframe {
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    max-width: 1440px;
+    background-color: var(--backgroundColorMain);
+    border: 1px solid red;                          /* Später löschen! */ 
+}
+
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.no-scroll {
+    overflow: hidden;
+}
+
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+}
+
+
+.header__logo__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.header__logo {
+    width: 12.5rem;
+    margin-left: var(--marginLRContent);
+}
+
+
+
+.header__nav {
+    height: 100%;
+    display: flex;
+    align-items: end;
+    font-size: var(--fontSizeHeader);
+    line-height: calc(var(--fontSizeMain) * 0.125);
+    font-weight: 700;
+    gap: 1rem;
+    margin-right: 5rem;
+    margin-bottom: 2rem;
+}
+
+
+.header__nav a:hover {
+    color: var(--fontColorHover);
+    border-bottom: 4px solid var(--fontColorHover);
+}
 
