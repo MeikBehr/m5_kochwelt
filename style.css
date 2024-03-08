@@ -76,6 +76,7 @@ body {
     margin-left: auto;
     max-width: 1440px;
     background-color: var(--backgroundColorMain);
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 
