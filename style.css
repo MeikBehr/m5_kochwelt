@@ -66,7 +66,6 @@ body {
     margin-left: auto;
     max-width: 1440px;
     background-color: var(--backgroundColorMain);
-    border: 1px solid red;                          /* Später löschen! */ 
 }
 
 
@@ -87,6 +86,7 @@ a {
     justify-content: space-between;
     align-items: center;
     height: 6rem;
+    box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.1);
 }
 
 
@@ -111,14 +111,16 @@ a {
     align-items: end;
     font-size: var(--fontSizeHeader);
     line-height: calc(var(--fontSizeMain) * 0.125);
-    font-weight: 700;
+    font-weight: 600;
     gap: 1rem;
     margin-right: 5rem;
     margin-bottom: 2rem;
+    color: var(--fontColorHeader);
 }
 
 
 .header__nav a:hover {
+    transition: color 150ms ease-in-out, border-bottom 150ms ease-in-out;
     color: var(--fontColorHover);
     border-bottom: 4px solid var(--fontColorHover);
 }
