@@ -1,0 +1,6 @@
+User-agent: UniversalRobot/1.0
+User-agent: *
+Disallow: /img/
+Disallow: /fonts/
+Disallow: /main.js
+Disallow: /style.css
