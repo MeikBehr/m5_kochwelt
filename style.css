@@ -13,6 +13,7 @@
     --grey_dark: #efefef;
     --footer_background: #403b3b;
     --fontColorMain: #000000;
+    --fontColorSecond: #ffffff;
     --fontColorHeader: #403B3B;
     --fontColorHover: #008000;
     --backgroundColorMain: #ffffff;
@@ -77,6 +78,7 @@ a {
 }
 
 
+
 .no-scroll {
     overflow: hidden;
 }
@@ -92,6 +94,12 @@ a {
 }
 
 
+
+.header a:visited {
+    color: var(--fontColorHeader);
+}
+
+
 .header__logo__container {
     display: flex;
     flex-direction: column;
@@ -104,6 +112,12 @@ a {
 .header__logo {
     width: 12.5rem;
 }
+
+.header__logo:hover {
+    transition: transform 200ms ease-in-out;
+    transform: scale(1.025);
+}
+
 
 
 
@@ -125,12 +139,6 @@ a {
     transition: color 150ms ease-in-out, border-bottom 150ms ease-in-out;
     color: var(--fontColorHover);
     border-bottom: 4px solid var(--fontColorHover);
-}
-
-.main__FirstSection,
-.main__ThirdSection {
-    margin-left: var(--marginLRContent);
-    margin-right: var(--marginLRContent);
 }
 
 
@@ -155,11 +163,8 @@ a {
 .main__ThirdSection__image > img{
     width: 20rem;
     border-radius: var(--borderRadius);
-}
-
-
-.main__SecondSection__image {
     margin-left: var(--marginLRContent);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -197,7 +202,69 @@ a {
     background-color: var(--green);
     border: none;
     color: var(--buttonColor);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.main__button:hover {
+    transition: filter 200ms ease-in-out;
+    filter: brightness(110%);
 }
 
 
 
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+    background-color: var(--footer_background);
+    color: #ffffff;
+}
+
+
+
+.footer a:visited {
+    color: var(--fontColorSecond);
+}
+
+.footer a:hover {
+    color: var(--fontColorHover);
+    font-weight: 600;
+}
+
+
+
+
+.footer__logo {
+    margin-left: var(--marginLRContent);
+}
+
+.footer__logo img {
+    width: 15rem;
+    filter: invert();
+}
+
+
+.footer__logo img:hover {
+    transition: transform 125ms ease-in-out;
+    transform: scale(1.025);
+}
+
+
+
+.footer__nav {
+    display: flex;
+    flex-direction: row;
+    margin-right: var(--marginLRContent);
+}
+
+.footer__nav__legals {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer__nav_socialMedia {
+    margin-left: 5rem;
+    display: flex;
+    gap: 1rem;
+}
