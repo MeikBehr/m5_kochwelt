@@ -59,6 +59,13 @@ body {
 
 }
 
+.d-none {
+    display: none!important;
+}
+
+#linkToContactForm {
+    cursor: pointer;
+}
 
 
 .mainframe {
@@ -135,7 +142,8 @@ a {
 }
 
 
-.header__nav a:hover {
+.header__nav a:hover,
+#linkToContactForm:hover {
     transition: color 150ms ease-in-out, border-bottom 150ms ease-in-out;
     color: var(--fontColorHover);
     border-bottom: 4px solid var(--fontColorHover);
@@ -148,8 +156,10 @@ a {
     display: flex;
     justify-content: space-between;
     min-width: 100%;
-    margin-top: 2rem;
-    margin-bottom: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 
 }
 

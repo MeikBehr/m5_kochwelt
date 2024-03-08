@@ -13,6 +13,7 @@
         <link rel="icon" type="image" href="./img/logo_small.png" />
 
         <link rel="stylesheet" type="text/css" href="./style.css">
+		<link rel="stylesheet" type="text/css" href="./overlay.css">
 
 		<script defer src="./data.js" type="text/javascript"></script>
 		<script defer src="./html.js" type="text/javascript"></script>
@@ -22,7 +23,7 @@
 
     </head>
 
-    <body>
+    <body onload="init()">
 
 		<div class="mainframe">
 
@@ -42,7 +43,7 @@
 						<a href="#">Rezept des Tages</a>
 					</div>
 					<div>
-						<a href="#">Kontakt</a>
+						<a href="#" id="linkToContactForm" onclick="showContactOverlay()">Kontakt</a>
 					</div>
 					<div>
 						<a href="#">Impressum</a>
@@ -132,7 +133,18 @@
 
 		</div>
 
-		<div></div>
+
+		<!-- <div id="contact__overlay" class="d-none">  -->
+		<div id="contact__overlay" class="d-none">
+
+			<div id="contact__container">
+                <div>INHALT</div>
+            </div>
+
+			<div id="contact__overlay__close">X</div>
+
+		</div>
+
 
 
     </body>
