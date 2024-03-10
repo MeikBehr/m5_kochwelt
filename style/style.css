@@ -112,6 +112,24 @@ a {
 }
 
 
+a:link,
+a:visited,
+a:active,
+a:hover {
+    color: var(--fontColorMain);
+    text-decoration: none;
+}
+
+
+.footer__nav__legals a:link,
+.footer__nav__legals a:visited,
+.footer__nav__legals a:active,
+.footer__nav__legals a:hover {
+    color: var(--fontColorSecond);
+}
+
+
+
 button {
     cursor: pointer;
 }
