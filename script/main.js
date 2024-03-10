@@ -1,22 +1,34 @@
 "use strict";
 
 function init () {
+	renderHeader();
+	renderFooter();
 	setEventListener();
 }
 
 
-function showContactOverlay() {
-	console.log('u clicked me!');
+function renderHeader() {
+	const container = document.getElementById('header');
+	container.innerHTML = '';
+	container.innerHTML += headerHTML();
+};
 
+
+function renderFooter() {
+	const container = document.getElementById('footer');
+	container.innerHTML = '';
+	container.innerHTML += footerHTML();
+};
+
+
+
+
+function showContactOverlay() {
 	document.getElementById('contact__overlay').classList.remove('d-none');
 	document.body.classList.add('no-scroll');
-
 	const container = document.getElementById('contact__container');
 	container.innerHTML = '';
-
-	container.innerHTML += /*html*/ `
-			<div>Kontaktformular hier einfügen</div>
-		 `
+	container.innerHTML += contactHTML();
 }
 
 
