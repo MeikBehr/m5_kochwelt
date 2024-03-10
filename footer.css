@@ -1,0 +1,57 @@
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+    background-color: var(--footer_background);
+    color: #ffffff;
+}
+
+
+
+.footer a:visited {
+    color: var(--fontColorSecond);
+}
+
+.footer a:hover {
+    color: var(--fontColorHover);
+    font-weight: 600;
+}
+
+
+
+
+.footer__logo {
+    margin-left: var(--marginLRContent);
+}
+
+.footer__logo img {
+    width: 15rem;
+    filter: invert();
+}
+
+
+.footer__logo img:hover {
+    transition: transform 125ms ease-in-out;
+    transform: scale(1.025);
+}
+
+
+
+.footer__nav {
+    display: flex;
+    flex-direction: row;
+    margin-right: var(--marginLRContent);
+}
+
+.footer__nav__legals {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer__nav_socialMedia {
+    margin-left: 5rem;
+    display: flex;
+    gap: 1rem;
+}
