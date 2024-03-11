@@ -4,6 +4,7 @@
 function init () {
 	renderHeader();
 	renderFooter();
+	renderMain();
 	setEventListener();
 }
 
@@ -35,6 +36,25 @@ function renderFooter() {
 	const container = getContainerForHtmlAndClearIt('footer');
 	container.innerHTML += footerHTML();
 };
+
+
+
+
+
+
+
+/**
+ * This function is used to render the HTML for the Footer-Element of the document
+ */
+function renderMain() {
+	const container = getContainerForHtmlAndClearIt('main');
+	container.innerHTML += mainHTML();
+};
+
+
+
+
+
 
 
 /**
