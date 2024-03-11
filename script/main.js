@@ -49,20 +49,9 @@ function showContactOverlay() {
 
 
 /**
- * This function starts setting the Eventlistner for closing the Overlay using ESC (Keydown) oder Click on X
+ * This function sets the Eventlistner for closing the Overlay using ESC (Keydown). The onclick on X is hardcoded to the html
  */
 function setEventListener() {
-	const close = document.getElementById(`contact__overlay__close`);
-	closeOverlay(close);
-}
-
-
-/**
- * This function is used to close the overlay if ESC is keydown or the X is clicked. It calls hideOverlay()
- * @param {HTMLElement } close 
- */
-function closeOverlay(close) {
-	close.addEventListener('click', hideOverlay);
 	document.addEventListener('keydown', (event) => {
 		if (event.key === "Escape") {
 			hideOverlay();

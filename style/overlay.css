@@ -1,4 +1,4 @@
-
+ 
 
 #contact__overlay {
     display: flex;
@@ -56,14 +56,17 @@
 
 
 
+
+
 #contact__container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     position: relative;
     width: clamp(20rem, 60%, 60vw);
-    border-radius: 1rem;
-    box-shadow: 0 0 1rem black;
+    height: clamp(20rem, 80%, 90vh);
+    border-radius: var(--borderRadius);
+    box-shadow: 4px 4px 16px rgba(0,0,0,1);
     animation-name: contact__container--fade-in;
     animation-duration: 0.25s;
     animation-timing-function: ease-in-out;
@@ -72,10 +75,13 @@
     animation-fill-mode: backwards;
 
     color: black;
-    height: 500px;
-    background-color: white;
+    background-color: rgba(255,255,255,0.9);
 
-    @media (max-width: 70%) {
+}
+
+
+@media (max-width: 70%) {
+    #contact__container {
         flex-direction: column; 
     }
 }
@@ -92,23 +98,167 @@
 }
 
 
-
-
-#contact__overlay__close {
+#content__close {
+    display: block;
     position: absolute;
-    z-index: 20000;
     top: 1rem;
     right: 1rem;
-    text-align: center;
-    width: 3rem;
-    height: 3rem;
-    text-shadow: 0 0 0.5rem black;
-    color: white;
-    font-size: 2.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+    width: 1.25rem;
+    height: 1.25rem;
+    color: transparent;
+    border-radius: 10000px;
+    filter: drop-shadow(0 0 0.5rem rgba(0,0,0,0.7));
+    background-image: linear-gradient(45deg, transparent 44%, var(--fontColorMain) 45%, var(--fontColorMain) 55%, transparent 56%),
+                      linear-gradient(-45deg, transparent 44%, var(--fontColorMain) 45%, var(--fontColorMain) 55%, transparent 56%);
+   
 }
 
 
+#content__close:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+
+.contact__heading {
+    padding-top: 3rem;
+    color: var(--green);
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.35rem;
+    text-shadow: 0 0 0.25rem rgba(0,0,0,0.5);
+}
+
+
+.contact__submit-container {
+    display: flex;
+    justify-content: center;
+    text-align: right;
+}
+
+
+.contact__paragraph {
+    font-weight: 250;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 0.25rem rgba(0,0,0,0.5);
+    padding: 1rem 6.5rem;
+}
+
+
+.form__horizontal {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.form__group {
+    position: relative;
+    margin-bottom: 1.5rem;
+    
+    .form__horizontal > & {
+        margin-right: 1.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+
+.form__input {
+    background-color: transparent;
+    border: 0.125rem solid var(--green);
+    padding: 0.75rem 1rem;
+    border-radius: 10000px;
+    color: var(--green);
+    text-shadow: 0 0 1rem rgba(0,0,0,0.5);
+    box-shadow: 0 0 1rem rgba(0,0,0,0.3);
+    font-size: 1rem;
+    width: 12.5rem;
+    font-family: inherit;
+}
+
+
+.form__input:focus {
+    outline: none;
+}
+
+
+.form__input::placeholder {
+    color: transparent;
+    text-shadow: none;
+}
+
+
+.form__label {
+    position: absolute;
+    top: 0.125rem;
+    left: 0;
+    font-size: 1rem;
+    margin: 0.75rem 1rem;
+    color: var(--green);
+
+    transform-origin: 0% 50%;
+    transform: scale(1) translate(0, 0);
+    transition: transform 0.25s ease-in-out;
+    will-change: transform;
+   
+}
+
+
+.form__input:focus ~ .form__label,
+.form__input[placeholder]:not(:placeholder-shown)  ~ .form__label {
+    transform: scale(0.75) translate(0.3rem, 2.7rem);
+}
+
+
+.form__textarea {
+    resize: none;
+    border-radius: var(--borderRadius);
+    background-color: transparent;
+    border: 0.125rem solid var(--green);
+    padding: 0.75rem 1rem;
+    color: var(--green);
+    text-shadow: 0 0 1rem rgba(0,0,0,0.5);
+    box-shadow: 0 0 1rem rgba(0,0,0,0.3);
+    font-size: 1rem;
+    width: 26.5rem;
+    height: 20rem;
+    font-family: inherit;
+}
+
+.form__textarea:focus {
+    outline: none;
+}
+
+
+.form__textarea::placeholder {
+    color: transparent;
+    text-shadow: none;
+}
+
+
+.form__textarea:focus ~ .form__label,
+.form__textarea[placeholder]:not(:placeholder-shown)  ~ .form__label {
+    transform: scale(0.75) translate(0.3rem, -2.5rem);
+}
+
+  
+.button--contact {
+    display: inline-block;
+    border-radius: 1000rem;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    color: var(--fontColorSecond);
+    background-color: var(--green);
+    border: 0.125rem solid rgba(0,0,0,0.2);
+    font-weight: normal;
+    text-transform: none;
+}
+
+.button--contact:hover {
+    transition: color 100ms ease-in-out, fill-color 100ms ease-in-out, transform 100ms ease-in-out;
+    color: rgba(0, 0, 0, 0.7);
+    filter: brightness(1.4);
+    transform: scale(1.05);
+}
+  
