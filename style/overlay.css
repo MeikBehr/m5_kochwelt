@@ -30,7 +30,7 @@
     backdrop-filter: blur(5px);
 
     animation-name: contact__overlay--fade-in;
-    animation-duration: 0.25s;
+    animation-duration: 0.75s;
     animation-timing-function: ease-in-out;
     animation-delay: 0s;
     animation-iteration-count: 1;
@@ -68,9 +68,9 @@
     border-radius: var(--borderRadius);
     box-shadow: 4px 4px 16px rgba(0,0,0,1);
     animation-name: contact__container--fade-in;
-    animation-duration: 0.25s;
+    animation-duration: 0.75s;
     animation-timing-function: ease-in-out;
-    animation-delay: 0.25s;
+    animation-delay: 250ms;
     animation-iteration-count: 1;
     animation-fill-mode: backwards;
 
@@ -120,13 +120,28 @@
 }
 
 
+
+
+
+.contact__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
+
+
+
+
 .contact__heading {
     padding-top: 3rem;
     color: var(--green);
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 0.35rem;
-    text-shadow: 0 0 0.25rem rgba(0,0,0,0.5);
+    text-align: center;
 }
 
 
@@ -138,16 +153,28 @@
 
 
 .contact__paragraph {
-    font-weight: 250;
+    /* font-weight: 250; */
     margin-bottom: 1rem;
     text-shadow: 0 0 0.25rem rgba(0,0,0,0.5);
-    padding: 1rem 6.5rem;
+    /* padding: 1rem 3.5rem; */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
 .form__horizontal {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 1.5rem;
 }
 
 
@@ -156,7 +183,7 @@
     margin-bottom: 1.5rem;
     
     .form__horizontal > & {
-        margin-right: 1.5rem;
+        /* margin-right: 1.5rem; */
         margin-bottom: 1rem;
     }
 }

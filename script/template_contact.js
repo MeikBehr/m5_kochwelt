@@ -4,6 +4,9 @@ function contactHTML() {
     return /*html*/ `
 
 				<a id="content__close" href="#" onclick="hideOverlay()"></a>
+
+<div class="contact__content">
+
 				<h3 class="contact__heading">Sie können uns gern kontaktieren:</h3>
 				<p class="contact__paragraph">Haben Sie Fragen zu einem Rezept, möchten ein eignes einreichen oder uns aus anderen Gründen kontaktieren, können Sie uns gern jederzeit über dieses Formular erreichen.</p>
 
@@ -32,6 +35,7 @@ function contactHTML() {
 					</div>
 				
 				</form>
+</div>
 
     `;
 }
