@@ -121,13 +121,13 @@ a:hover {
 }
 
 
-.footer__nav__legals a:link,
-.footer__nav__legals a:visited,
-.footer__nav__legals a:active,
-.footer__nav__legals a:hover {
+
+.footer__nav a:link,
+.footer__nav a:visited,
+.footer__nav a:active,
+.footer__nav a:hover {
     color: var(--fontColorSecond);
 }
-
 
 
 button {

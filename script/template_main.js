@@ -7,7 +7,7 @@ function mainHTML() {
 <div class="daily-dish">
             <div class="main-dish-container">
                 <div>
-                    <img class="main-dish" src="../img/croissant.jpg">
+                    <img class="main-dish" src="./img/croissant.jpg">
                 </div>
                 <div class="main-dish-content">
                     <h2>Rezept des Tages</h2>
@@ -23,15 +23,15 @@ function mainHTML() {
                 </div>
                 <div class="new-recipe-link">
                     <a href="#" >
-                    <img src="../img/croissant.jpg" class="new-recipe-img">
+                    <img src="./img/croissant.jpg" class="new-recipe-img">
                     <p>Rezept 1</p>
                     </a>
                     <a href="#">
-                    <img src="../img/salad.jpg" class="new-recipe-img">
+                    <img src="./img/salad.jpg" class="new-recipe-img">
                     <p>Rezept 2</p>
                     </a>
                     <a href="#">
-                    <img src="../img/wok.jpg" class="new-recipe-img">
+                    <img src="./img/wok.jpg" class="new-recipe-img">
                     <p>Rezept 3</p>
                     </a>
                 </div>
@@ -43,7 +43,7 @@ function mainHTML() {
             </div>
             <div class="info-container-content">
                 <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste quis placeat repellendus cum ipsam perferendis, et unde earum ducimus explicabo voluptates cupiditate ea fuga voluptate minus enim dolore magni eaque.</span>
-                <img class="info-container-img" src="../img/wok.jpg">
+                <img class="info-container-img" src="./img/wok.jpg">
             </div>
         </div>
 
