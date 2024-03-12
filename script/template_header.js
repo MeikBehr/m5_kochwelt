@@ -3,17 +3,17 @@
 function headerHTML() {
     return /*html*/ `
     <figure class="header__logo__container">
-		<a href="#">
-			<img class="header__logo" src="../img/logo.png" alt="Logo Kochwelt: Eine Kochmütze">
+		<a href="./index.html">
+			<img class="header__logo" src="./img/logo.png" alt="Logo Kochwelt: Eine Kochmütze">
 		</a>
 	</figure>
 
 	<nav class="header__nav">
 		<div>
-			<a href="#">Start</a>
+			<a href="./index.html">Start</a>
 		</div>
 		<div>
-			<a href="#">Rezept des Tages</a>
+			<a href="./recipe_of_the_day.html">Rezept des Tages</a>
 		</div>
 		<div>
 			<a href="#" id="linkToContactForm" onclick="showContactOverlay()">Kontakt</a>
