@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: normal;
+    src: url(/fonts/Raleway-VariableFont_wght.ttf) format("truetype");
+}
+
+
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+    display: inline-block;
+    font-display: swap;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: normal;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1440px;
+    background-color: white;
+}
+
+h1{
+    margin-top: 28px;
+    margin-bottom: 14px;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.icon{
+    height: 16px;
+    width: 16px;
+    margin-left: 5px;
+}
+
+.title-img{
+    height: 250px;
+    width: 1440px;
+    background-image: url(img/salad.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+
+.item-desing{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    background-color: #efefef;
+    border-radius: 10px;
+    border: 5px solid #efefef;
+}
+
+.difficutly{
+    background-image: url(img/icons/brain-solid.svg);
+    background-size: cover;
+}
+
+.date{
+    background-image: url(img/icons/calendar-alt-regular.svg);
+    background-size: cover;
+}
+
+
+.time{
+    background-image: url(img/icons/clock-regular.svg);
+    background-size: cover;
+
+}
+
+.parting-line{
+    margin-top: 20px;
+}
+
+.info-text{
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.user-info{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profile-img{
+    background-image: url(img/profile.png);
+    background-size: cover;
+    height: 64px;
+    width: 64px;
+    border-radius: 100px;
+}
+
+.input-recept{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.input-title{
+    margin-right: 10px;
+}
+
+.title{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.zutaten-eingabe{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+tr{
+    height: 2.5rem;
+}
+
+table tr:nth-child(odd){
+    background-color: #efefef;
+}
+
+td:first-child{
+    width: 3%;
+    text-align: right;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+ }
+
+ td:nth-child(2){
+    width: 1px;
+ }
+
+ td:last-child{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+ }
+
+ .input-type{
+    height: 30px;
+    width: 142px;
+    padding: 0;
+    border-left-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-right-width: 0px;
+    border-color: #efefef;
+    border-style: solid;
+ }
+
+ .submit-button{
+    height: 30px;
+    width: 150px;
+    background-color: #008000;
+    color: white;
+    border: 0;
+    cursor: pointer;
+ }

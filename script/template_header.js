@@ -4,7 +4,7 @@ function headerHTML() {
     return /*html*/ `
     <figure class="header__logo__container">
 		<a href="#">
-			<img class="header__logo" src="./img/logo.png" alt="Logo Kochwelt: Eine Kochmütze">
+			<img class="header__logo" src="../img/logo.png" alt="Logo Kochwelt: Eine Kochmütze">
 		</a>
 	</figure>
 
