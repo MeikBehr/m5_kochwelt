@@ -24,6 +24,7 @@ function headHTML() {
 		<script defer src="./script/template_header.js" type="text/javascript"></script>
 		<script defer src="./script/template_contact.js" type="text/javascript"></script>
 		<script defer src="./script/template_main.js" type="text/javascript"></script>
+		<script defer src="./script/recipe.js" type="text/javascript"></script>
         <script defer src="./script/main.js" type="text/javascript"></script>
 
     <title>Kochwelt - Gruppe 107</title>	

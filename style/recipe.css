@@ -1,5 +1,5 @@
 
-
+/* 
 html {
     font-display: swap;
     font-family: "Raleway";
@@ -11,6 +11,15 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+} */
+
+
+#recipe_main {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
 }
 
 
@@ -33,7 +42,7 @@ h1{
 
 .title-img{
     height: 250px;
-    width: 1440px;
+    width: 100%;
     background-image: url(../img/salad.jpg);
     background-image: url(../img/salad.jpg);
     background-size: cover;
@@ -168,4 +177,19 @@ td:first-child{
     color: white;
     border: 0;
     cursor: pointer;
+ }
+
+
+
+.amount {
+    min-width: 100px;
+}
+
+ .ingredient {
+    max-width: 50%;
+    padding-left: 1rem;
+ }
+
+ .sections__table {
+    width: 100%;
  }
