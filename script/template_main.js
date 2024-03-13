@@ -7,12 +7,14 @@ function mainHTML() {
 <div class="daily-dish">
             <div class="main-dish-container">
                 <div>
-                    <img class="main-dish" src="./img/croissant.jpg">
+                    <a href="./recipe_of_the_day.html">
+                        <img class="main-dish" src="./img/croissant.jpg">
+                    </a>
                 </div>
                 <div class="main-dish-content">
                     <h2>Rezept des Tages</h2>
                     <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias veritatis, consequatur necessitatibus ipsam iusto assumenda aliquam facere dignissimos suscipit quia quis ea, tempore ad, quos magni quod natus aut animi?</span>
-                    <a class="dish-btn">Rezept öffnen</a>
+                    <a class="dish-btn" href="./recipe_of_the_day.html">Rezept öffnen</a>
                 </div>
             </div>
         </div>

@@ -4,7 +4,7 @@ function footerHTML() {
     return /*html*/ `
     <section class="footer__logo">
 		<figure>
-			<a href="#">
+			<a href="./index.html">
 				<img src="./img/logo.png" alt="">
 			</a>
 		</figure>
