@@ -106,3 +106,7 @@ function hideOverlay() {
 	card_overlay.classList.add('d-none');
 	document.body.classList.remove('no-scroll');
 }
+
+
+
+
