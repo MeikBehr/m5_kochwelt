@@ -23,7 +23,7 @@ function contactHTML() {
 					</div>
 
                     <div class="form__horizontal">
-						<div class="form__group">
+						<div class="form__group__textarea">
 							<textarea class="form__textarea" id="contact-message" required></textarea>
 							<label class="form__label" for="contact-message">Nachricht</label>
 						</div>
