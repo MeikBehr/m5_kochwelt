@@ -19,7 +19,6 @@ function headHTML() {
 		<link rel="stylesheet" type="text/css" href="./style/recipe.css">
 
 		<script defer src="./script/data.js" type="text/javascript"></script>
-		<script defer src="./script/html.js" type="text/javascript"></script>
         <script defer src="./script/template_head.js" type="text/javascript"></script>
 		<script defer src="./script/template_footer.js" type="text/javascript"></script>
 		<script defer src="./script/template_header.js" type="text/javascript"></script>
