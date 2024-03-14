@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="description" content="This is a trainingswebside of the Developer Akademie Group 107" />
+
+        <link rel="icon" type="image" href="./img/logo_small.png" />
+
+        <link rel="stylesheet" type="text/css" href="./style/style.css" />
+        <link rel="stylesheet" type="text/css" href="./style/header.css" />
+        <link rel="stylesheet" type="text/css" href="./style/content.css" />
+        <link rel="stylesheet" type="text/css" href="./style/footer.css" />
+        <link rel="stylesheet" type="text/css" href="./style/main.css" />
+        <link rel="stylesheet" type="text/css" href="./style/contact.css" />
+        <link rel="stylesheet" type="text/css" href="./style/recipe.css" />
+
+		<script defer src="./script/template_head.js" type="text/javascript"></script>
+		<script defer src="./script/template_footer.js" type="text/javascript"></script>
+		<script defer src="./script/template_header.js" type="text/javascript"></script>
+		<script defer src="./script/template_contact.js" type="text/javascript"></script>
+		<script defer src="./script/template_main.js" type="text/javascript"></script>
+		<script defer src="./script/recipe.js" type="text/javascript"></script>
+        <script defer src="./script/script.js" type="text/javascript"></script>
+
+        <title>Rezept des Tages</title>
+    </head>
+
+    <body onload="init(false)">
+
+        <div class="mainframe">
+
+            <header id="header" class="header">
+			</header>
+
+            <main id="recipe_main">
+
+                <h1>Griechischer Bauernsalat</h1>
+
+		        <div class="title-img"></div>
+
+                <section>
+                    <div class="info">
+
+                        <div class="item-desing">
+                            <div class="time icon"></div>
+                            <div>15 Min</div>
+                        </div>
+                        <div class="item-desing">
+                            <div class="difficutly icon"></div>
+                            <div>simple</div>
+                        </div>
+                        <div class="item-desing">
+                            <div class="date icon"></div>
+                            <div>28.09.2020</div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="parting-line">
+                    <hr style="opacity: 30%;">
+                </div>
+
+                <div class="zutaten-eingabe">
+                    <div class="portion-title">
+                        Zutaten für
+                    </div>
+                    <div>
+                        <input id="input-type-border" class="input-type" type="number">
+                        <input class="submit-button" type="submit" value="Portionen">
+                    </div>
+                </div>
+
+                <section>
+                        <table>
+                            <tr>
+                                <td>1</td>
+                                <td>Salatgurken</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Paprikaschotn</td>
+                            </tr>
+                            <tr>
+                                <td>500 g</td>
+                                <td>Tomaten</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Zwiebeln</td>
+                            </tr>
+                            <tr>
+                                <td>200 g</td>
+                                <td>Schafskäse</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Glas Oliven, schwarz. 100g</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Salz und Pfeffer</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Zitrone</td>
+                            </tr>
+                            <tr>
+                                <td>125 ml</td>
+                                <td>Olivenöl</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Oregano</td>
+                            </tr>
+                        </table>
+                </section>
+
+                <section>
+
+                    <div class="title">
+                        <h2>Zubereitung</h2>
+                    </div>
+
+                    <div class="info">
+                        <div class="item-desing">
+                            <div class="time icon"></div>
+                            <div>ca. 15 Minuten</div>
+                        </div>
+                        <div class="item-desing">
+                            <div class="time icon"></div>
+                            <div>Gesamtzeit ca. 15 Minuten</div>
+                        </div>
+                    </div>
+
+                    <div class="info-text">
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                    </div>
+
+                    <h3>Rezept erstellt von</h3>
+
+                    <div class="user-info">
+                        <div class="profile-img"></div>
+                        <div>Anton</div>
+                    </div>
+
+                </section>      
+
+
+            </main>
+
+            <footer id="footer" class="footer"></footer>
+        </div>
+
+        <section id="contact__overlay" class="d-none">
+            <div id="contact__container"></div>
+        </section>
+
+        <!-- Cookiebar -->
+        <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?customize=1&always=1&top=1&showNoConsent=1&showPolicyLink=1&blocking=1"></script> -->
+    </body>
+</html>

@@ -13,7 +13,7 @@ function headerHTML() {
 			<a href="./index.html">Start</a>
 		</div>
 		<div>
-			<a href="./recipe_of_the_day.html">Rezept des Tages</a>
+			<a href="./recipe.html">Rezept des Tages</a>
 		</div>
 		<div>
 			<a href="#" id="linkToContactForm" onclick="showContactOverlay()">Kontakt</a>

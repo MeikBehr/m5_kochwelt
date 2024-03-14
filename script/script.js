@@ -30,7 +30,7 @@ function getContainerForHtmlAndClearIt(ID) {
  * This function is used to render the Head-Element of the document on every Page
  */
 function renderHead() {
-	const container = document.getElementsByTagName("head")[0];
+	const container = document.getElementsByTagName('head')[0];
 	container.innerHTML = "";
 	container.innerHTML += headHTML();
 }

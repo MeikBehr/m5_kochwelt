@@ -1,93 +1,104 @@
 
-/* 
-html {
-    font-display: swap;
-    font-family: "Raleway";
-    font-style: normal;
-    font-weight: normal;
-}
 
-body{
+/* #recipe_main {
+    display: flex;
+    flex-direction: column;
+    margin-left: var(--marginLRContent);
+    padding-right: var(--marginLRContent);
+    min-width: calc(100% - var(--marginLRContent));
+} */
+
+
+
+/* body{
     display: flex;
     flex-direction: column;
     align-items: center;
 } */
 
 
-#recipe_main {
-    display: flex;
-    flex-direction: column;
-    margin-left: var(--marginLRContent);
-    padding-right: var(--marginLRContent);
-    min-width: calc(100% - var(--marginLRContent));
-}
+/* main {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1440px;
+    background-color: white;
+} */
 
 
 h1{
+    margin-top: 34px;
+    margin-bottom: 18px;
+    font-weight: 1000;
+}
+
+h2 {
     margin-top: 28px;
     margin-bottom: 14px;
 }
 
-.info{
+.info {
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 22px;
 }
 
-.icon{
+.icon {
     height: 16px;
     width: 16px;
-    margin-left: 5px;
 }
 
-.title-img{
-    height: 250px;
-    width: 100%;
-    background-image: url(../img/salad.jpg);
+.title-img {
+    height: 170px;
     background-image: url(../img/salad.jpg);
     background-size: cover;
     background-position: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     border-radius: 10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 
-.item-desing{
+.item-desing {
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    gap: 10px;
     background-color: #efefef;
     border-radius: 10px;
     border: 5px solid #efefef;
+    padding-right: 5px;
+    padding-left: 5px;
 }
 
-.difficutly{
+.difficutly {
     background-image: url(../img/icons/brain-solid.svg);
     background-size: cover;
 }
 
-.date{
+.date {
     background-image: url(../img/icons/calendar-alt-regular.svg);
     background-size: cover;
 }
 
 
-.time{
+.time {
     background-image: url(../img/icons/clock-regular.svg);
     background-size: cover;
 
 }
 
-.parting-line{
-    margin-top: 20px;
+.parting-line {
+    margin-top: 54px;
 }
 
-.info-text{
+.info-text {
     margin-top: 24px;
     margin-bottom: 24px;
+    line-height: 20px;
 }
 
-.user-info{
+.user-info {
     margin-bottom: 20px;
     margin-top: 20px;
     gap: 20px;
@@ -96,70 +107,72 @@ h1{
     align-items: center;
 }
 
-.profile-img{
+.profile-img {
     background-image: url(../img/profile.png);
     background-size: cover;
     height: 64px;
     width: 64px;
-    border-radius: 100px;
+    border-radius: 105000px;
 }
 
-.input-recept{
+.input-recept {
     display: flex;
     flex-direction: row;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-.input-title{
+.input-title {
     margin-right: 10px;
 }
 
-.title{
+.title {
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-table{
+table {
     border-collapse: collapse;
     width: 100%;
 }
 
-.zutaten-eingabe{
+.zutaten-eingabe {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     margin-bottom: 10px;
     margin-top: 10px;
-    gap: 10px;
+    gap: 15px;
 }
 
-tr{
+tr {
     height: 2.5rem;
 }
 
-table tr:nth-child(odd){
+table tr:nth-child(odd) {
     background-color: #efefef;
 }
 
-td:first-child{
-    width: 3%;
+td:first-child {
+    width: 4%;
     text-align: right;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    padding-right: 8px;
+
  }
 
- td:nth-child(2){
+ /* td:nth-child(2){
     width: 1px;
- }
+ } */
 
- td:last-child{
+ td:last-child {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
  }
 
- .input-type{
-    height: 30px;
+ .input-type {
+    height: 35px;
     width: 142px;
     padding: 0;
     border-left-width: 1px;
@@ -168,10 +181,15 @@ td:first-child{
     border-right-width: 0px;
     border-color: #efefef;
     border-style: solid;
+    border-image: none;
+    outline: none;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
  }
 
- .submit-button{
-    height: 30px;
+ .submit-button {
+    height: 35px;
     width: 150px;
     background-color: #008000;
     color: white;
@@ -180,16 +198,6 @@ td:first-child{
  }
 
 
-
-.amount {
-    min-width: 100px;
-}
-
- .ingredient {
-    max-width: 50%;
-    padding-left: 1rem;
- }
-
- .sections__table {
-    width: 100%;
+ .portion-title {
+    padding-top: 7px;
  }
