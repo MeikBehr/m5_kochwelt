@@ -98,7 +98,7 @@
     flex: 0 0 9rem;
     height: 2rem;
     padding: 0.25rem;
-    border: 1px solid #efefef;
+    border: 1px solid var(--grey_dark);
     outline: none;
     text-align: left;
     border-top-left-radius: 5px;
@@ -139,7 +139,7 @@
 
 
 .recipe__table tr:nth-child(odd) {
-    background-color: #efefef;
+    background-color: var(--grey_dark);
 }
 
 
