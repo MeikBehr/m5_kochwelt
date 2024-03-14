@@ -86,116 +86,12 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-h2 {
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-
-
-.info-text {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    line-height: 2rem;
-}
-
-.user-info {
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-    gap: 2rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.profile-img {
-    background-image: url(../img/profile.png);
-    background-size: cover;
-    height: 4rem;
-    width: 4rem;
-    border-radius: 10000px;
-}
-
-.input-recept {
-    display: flex;
-    flex-direction: row;
-    margin-top: 0.75rem;
-    margin-bottom: 0.75rem;
-}
-
-.input-title {
-    margin-right: 0.75rem;
-}
-
-.title {
-    margin-top: 0.75rem;
-    margin-bottom: 0.75rem;
-}
-
-
-
-
-
-
-
-table {
-    border-collapse: collapse;
-    table-layout: fixed;
-    min-width: 100%;
-}
-
-
-
-.portion-title {
-    display: flex;
-    align-self: center;
-}
-
-
-.recipe__table__amount {
-    padding: 0.5rem 1rem;
-    width: 6rem;
-}
-
-.recipe__table__ingredients {
-    padding: 0.5rem 1rem;
-}
-
-
-
-
-table tr:nth-child(odd) {
-    background-color: #efefef;
-}
-
-td:first-child {
-    text-align: right;
-    border-top-left-radius: 0.75rem;
-    border-bottom-left-radius: 0.75rem;
+.recipe__label {
     padding-right: 0.5rem;
-
 }
 
 
-td:last-child {
-    border-top-right-radius: 0.75rem;
-    border-bottom-right-radius: 0.75rem;
-}
-
-.input-type {
+.recipe__input {
     height: 2rem;
     width: 9rem;
     padding: 0.25rem;
@@ -206,7 +102,8 @@ td:last-child {
     border-bottom-left-radius: 5px;
 }
 
-.submit-button {
+
+.recipe__button {
     height: 2rem;
     width: 9rem;
     background-color: var(--green);
@@ -214,4 +111,75 @@ td:last-child {
     border: 0;
     cursor: pointer;
 }
+
+
+.recipe__table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    min-width: 100%;
+}
+
+
+.recipe__table td:first-child {
+    text-align: right;
+    border-top-left-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem;
+    padding-right: 0.5rem;
+
+}
+
+
+.recipe__table td:last-child {
+    border-top-right-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+}
+
+
+.recipe__table tr:nth-child(odd) {
+    background-color: #efefef;
+}
+
+
+.recipe__table__amount {
+    padding: 0.5rem 1rem;
+    width: 6rem;
+}
+
+
+.recipe__table__ingredients {
+    padding: 0.5rem 1rem;
+}
+
+
+.recipe__title > h2 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+
+.recipe__preparation {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    line-height: 2rem;
+}
+
+
+.recipe__author {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    gap: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.recipe__author-img {
+    background-image: url(../img/profile.png);
+    background-size: cover;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 10000px;
+}
+
 
