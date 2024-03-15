@@ -64,12 +64,11 @@
                 </div>
 
                 <div class="recipe__input-ingredients">
-                    <form onsubmit="">
+                    <!-- <form id="recipe__form">     VARIANTE A -->
+                    <form action="javascript:void(0)">  <!--  VARIANTE B-->
                         <label class="recipe__label" for="recipe__input">Zutaten für</label>
-                        <input id="recipe__input" class="recipe__input" type="number" value="1" min="1" max="20">
-                        <input class="recipe__button" type="submit" value="Portionen">
-                        <!-- <button class="recipe__button">Portionen</button> -->
-                        <!-- <input class="recipe__button" type="submit" value="Portionen"> -->
+                        <input id="recipe__input" class="recipe__input" type="number" value="4" min="1" max="20" autocomplete="off">
+                        <input class="recipe__button" type="submit" value="Portionen" onclick="updateIngredients()">
                     </form>
                 </div>
 

@@ -1,26 +1,29 @@
 "use strict";
 
 
-function renderRecipe(index) {
-    const container = document.getElementById("recipe__table");
-    container.innerHTML = "";
+function updateIngredients() {
+    const newPortions = document.getElementById("recipe__input");
+    const newPortionsValue = parseFloat(newPortions.value);
+    
+    console.log(newPortionsValue);
 
-    for (let id = 0; id < recipes[index]["zutaten"].length; id++) {
-        const ingredient = recipes[index]["zutaten"][id];
-        const amount = recipes[index]["menge"][id];
+    const actualAmounts = document.querySelectorAll('.recipe__table__amount');
+  
+    console.log(actualAmounts);
 
-        container.innerHTML += /*html*/ `
-            <tr>
-                <td class="amount">${amount}</td>
-                <td></td>
-                <td class="ingredient">${ingredient}</td>
-            </tr>           
-        `;
+    actualAmounts.forEach((element) => {
+        console.log(element.innerHTML);
+    })
 
 
-    }
+  }
+  
 
-    document.getElementById("author_name").innerHTML = recipes[index]["author"];
-    document.getElementById("recipe__preparation").innerHTML = recipes[index]["zubereitung"];
-   
-}
+
+
+
+
+//  VARIANTE A
+// document.getElementById('recipe__form').addEventListener('submit', function(event) {
+//     event.preventDefault();
+// });
