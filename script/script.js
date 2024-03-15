@@ -1,11 +1,10 @@
 "use strict";
 
 
-function init (main) {
+function init () {
 	renderHead();
 	renderHeader();
 	renderFooter();
-	// if (main) renderMain();
 	setEventListener();
 }
 
