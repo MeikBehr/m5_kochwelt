@@ -18,6 +18,7 @@
 
 }
 
+
 #contact__overlay::before {
     content: "";
     position: absolute;
@@ -37,8 +38,6 @@
 }
 
 
-
-
 @keyframes contact__overlay--fade-in {
     0% {
         opacity: 0;
@@ -53,9 +52,6 @@
 #contact__overlay::before {
     filter: blur(2px);
 }
-
-
-
 
 
 #contact__container {
@@ -120,9 +116,6 @@
 }
 
 
-
-
-
 .contact__content {
     display: flex;
     flex-direction: column;
@@ -130,9 +123,6 @@
     padding-left: 6rem;
     padding-right: 6rem;
 }
-
-
-
 
 
 .contact__heading {
@@ -201,7 +191,6 @@
 }
 
 
-
 .form__input {
     background-color: transparent;
     border: 0.125rem solid var(--green);
@@ -264,6 +253,7 @@
     font-family: inherit;
 }
 
+
 .form__textarea:focus {
     outline: none;
 }
@@ -294,6 +284,7 @@
     font-weight: normal;
     text-transform: none;
 }
+
 
 .button--contact:hover {
     transition: color 100ms ease-in-out, fill-color 100ms ease-in-out, transform 100ms ease-in-out;
