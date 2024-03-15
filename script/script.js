@@ -5,7 +5,7 @@ function init (main) {
 	renderHead();
 	renderHeader();
 	renderFooter();
-	if (main) renderMain();
+	// if (main) renderMain();
 	setEventListener();
 }
 

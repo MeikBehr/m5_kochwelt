@@ -3,10 +3,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 6rem;
+    height: 7rem;
     box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.1);
 }
-
 
 
 .header a:visited {
@@ -24,15 +23,14 @@
 
 
 .header__logo {
-    width: 12.5rem;
+    width: 16.5rem;
 }
+
 
 .header__logo:hover {
     transition: transform 200ms ease-in-out;
     transform: scale(1.025);
 }
-
-
 
 
 .header__nav {
@@ -44,7 +42,7 @@
     font-weight: 600;
     gap: 1rem;
     margin-right: var(--marginLRContent);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     color: var(--fontColorHeader);
 }
 

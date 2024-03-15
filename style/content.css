@@ -1,91 +1,175 @@
 
 
-.main__FirstSection,
-.main__SecondSection,
-.main__ThirdSection {
+.main__dish-container {
     display: flex;
-    justify-content: space-between;
-    min-width: 100%;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-
-}
-
-.main__SecondSection {
-    background-color: var(--grey_dark);
+    padding: 4.5rem var(--marginLRContent) 4.5rem var(--marginLRContent);
+    display: flex;
+    gap: 2rem;
 }
 
 
-.main__FirstSection__image,
-.main__SecondSection__image,
-.main__ThirdSection__image {
-    position: relative;
+.main__dish__image-container {
     overflow: hidden;
-    width: 50rem;
-    margin-left: var(--marginLRContent);
     border-radius: var(--borderRadius);
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
 }
 
-.main__FirstSection__image > img,
-.main__SecondSection__image > img,
-.main__ThirdSection__image > img {
-    width: 100%;
+
+.main__dish__image {
     height: 100%;
+    width: 100%;
+    position: relative;
     object-fit: cover;
-    transition: transform 300ms ease-in-out;
+    transition: transform 250ms ease-in-out;
 }
 
-.main__FirstSection__image:hover img,
-.main__SecondSection__image:hover img,
-.main__ThirdSection__image:hover img {
+
+.main__dish__image:hover {
     transform: scale(1.1);
 }
 
 
-
-.main__FirstSection__article,
-.main__SecondSection__article,
-.main__ThirdSection__article {
+.main__dish__recipe-of-the-day {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: start;
-    padding-left: 2rem;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 
-.main__FirstSection__article,
-.main__SecondSection__article,
-.main__ThirdSection__article {
-    margin-right: var(--marginLRContent);
+.main__dish__recipe-of-the-day h1{
+    font-size: 1.75rem;
+    font-weight: 600;
+    padding-bottom: 2rem;
 }
 
 
-.main__FirstSection__article > p,
-.main__SecondSection__article > p,
-.main__ThirdSection__article > p {
-    word-wrap: break-word;
-    white-space: normal;
-    padding-top: 1rem;
+.main__dish__recipe-of-the-day p{
+    font-weight: 300;
+    font-size: 1rem;
 }
 
 
 
-.main__button {
-    margin-top: 2rem;
-    padding: 0.5rem 3rem;
-    background-color: var(--green);
-    border: none;
+
+
+.main__dish-btn {
+    font-size: 1.125rem;
+    font-weight: 500;
+    padding: 0.75rem 3.75rem;
     color: var(--buttonColor);
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    background-color: var(--green);
+    transition: background-color 150ms ease-in-out;
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
+    margin-bottom: 2.5rem;
 }
 
-.main__button:hover {
-    transition: filter 200ms ease-in-out;
-    filter: brightness(110%);
+
+.main__dish-btn:hover {
+    color: var(--buttonColor);
+    transition: background-color 150ms ease-in-out;
+    background-color: var(--buttonBackgroundcolorHover);
 }
 
 
+.choose-recipe__container {
+    display: flex;
+    flex-direction: column;
+    padding: 4.5rem var(--marginLRContent) 4.5rem var(--marginLRContent);
+    background-color: var(--grey_dark);
+}
+
+
+.choose-recipe__headline {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.5rem;
+}
+
+
+.choose-recipe__headline h2,
+.main__info-headline h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+
+
+.choose-recipe__links__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10rem;
+}
+
+
+.choose-recipe__links__image-wrapper {
+    height: 14rem;
+    width: 14rem;
+    overflow: hidden;
+    border-radius: var(--borderRadius);
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
+}
+
+
+.choose-recipe__links__image-wrapper > img {
+    height: 100%;
+    width: 100%;
+    border-radius: var(--borderRadius);
+    cursor: pointer;
+    object-fit: cover;
+    transition: transform 250ms ease-in-out;
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
+}
+
+
+.choose-recipe__links__image-wrapper > img:hover {
+    transform: scale(1.1);
+}
+
+
+.choose-recipe__links__container p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    color: var(--fontColorMain);
+    margin-top: 0.25rem;
+}
+
+
+.main__info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3.5rem var(--marginLRContent) 6.5rem var(--marginLRContent);
+}
+
+
+.main__info-headline {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2.5rem;
+}
+
+
+.main__info-container__content{
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+
+.main__info-container__content p {
+    font-size: 1rem;
+    line-height: 1.25rem;
+}
+
+
+.main__info-container__img{
+    height: 14rem;
+    width: 14rem;
+    border-radius: var(--borderRadius);
+    object-fit: cover;
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
+}

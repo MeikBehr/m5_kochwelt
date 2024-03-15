@@ -14,15 +14,14 @@ function headHTML() {
 		<link rel="stylesheet" type="text/css" href="./style/header.css">
 		<link rel="stylesheet" type="text/css" href="./style/content.css">
 		<link rel="stylesheet" type="text/css" href="./style/footer.css">
-		<link rel="stylesheet" type="text/css" href="./style/main.css">
 		<link rel="stylesheet" type="text/css" href="./style/contact.css">
 		<link rel="stylesheet" type="text/css" href="./style/recipe.css">
+		<link rel="stylesheet" type="text/css" href="./style/mediaqueries.css">
 
         <script defer src="./script/template_head.js" type="text/javascript"></script>
 		<script defer src="./script/template_footer.js" type="text/javascript"></script>
 		<script defer src="./script/template_header.js" type="text/javascript"></script>
 		<script defer src="./script/template_contact.js" type="text/javascript"></script>
-		<script defer src="./script/template_main.js" type="text/javascript"></script>
 		<script defer src="./script/recipe.js" type="text/javascript"></script>
         <script defer src="./script/script.js" type="text/javascript"></script>
 
