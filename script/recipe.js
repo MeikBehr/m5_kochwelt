@@ -2,22 +2,29 @@
 
 
 function updateIngredients() {
-    const newPortions = document.getElementById("recipe__input");
-    const newPortionsValue = parseFloat(newPortions.value);
-    
-    console.log(newPortionsValue);
-
+    const newPortionsValue = parseFloat(document.getElementById("recipe__input").value);
     const actualAmounts = document.querySelectorAll('.recipe__table__amount');
-  
-    console.log(actualAmounts);
-
+    const table = document.querySelector('.recipe__table');
+    const originalAmount = parseFloat(table.getAttribute('data-original-amount'));
     actualAmounts.forEach((element) => {
-        console.log(element.innerHTML);
+        if (element.innerHTML !== '') {
+            const amount = parseFloat(element.innerHTML);
+            const unit = element.innerHTML.split(" ").slice(1).join(" ");
+            const amountNew = amount * newPortionsValue / originalAmount;
+            const newAmountWithUnits = amountNew + " "  + unit;
+            element.innerHTML = newAmountWithUnits;
+        }
     })
-
-
-  }
+    table.setAttribute('data-original-amount', `${newPortionsValue}`);
+}
   
+
+
+
+
+
+
+
 
 
 
