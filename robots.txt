@@ -5,3 +5,4 @@ Disallow: /fonts/
 Disallow: /script/
 Disallow: /style/
 Disallow: /recipe.html
+Disallow: /send_mail.html

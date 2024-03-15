@@ -1,3 +1,4 @@
+
 @font-face {
     font-display: swap;
     font-family: "Raleway";
@@ -21,11 +22,13 @@ https://codepen.io/stephenpaton-tech/full/JjRvGmY
     width: 16px;
 }
   
+
 *::-webkit-scrollbar-track {
     background: #c0c0c0;
     border-radius: 7px;
 }
   
+
 *::-webkit-scrollbar-thumb {
     background-color: #000000;
     border-radius: 7px;
@@ -87,9 +90,11 @@ body {
 
 }
 
+
 .d-none {
     display: none!important;
 }
+
 
 #linkToContactForm {
     cursor: pointer;
@@ -115,10 +120,12 @@ a {
     padding: 4px 4px;
 }
 
+
 a:focus {
     outline-color: var(--green);
     padding: 4px 4px;
 }
+
 
 a:link,
 a:visited,
@@ -127,7 +134,6 @@ a:hover {
     color: var(--fontColorMain);
     text-decoration: none;
 }
-
 
 
 .footer__nav a:link,
@@ -148,4 +154,15 @@ button {
 }
 
 
+.confirmation-mail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: clamp(10rem, 65dvh, 200rem);
+    width: 100%;
+}
 
+
+.confirmation-mail > h1 {
+    font-size: 3rem;
+}

@@ -1,6 +1,8 @@
 "use strict";
 
-
+/**
+ * This is the initialising function, started by the body onload
+ */
 function init () {
 	renderHead();
 	renderHeader();
@@ -90,26 +92,24 @@ function hideOverlay() {
 }
 
 
-
-
-
-
-/////////////////////////////////////////////////////////////////
-
-// Beispielfunktion:
-function sendMail(event) {
+/**
+ * This function will send an email to formspree, using the data from the contact-form
+ * @param {*} event 
+ */
+function sendMail(event){﻿
     event.preventDefault();
     const data = new FormData(event.target);
 
-    fetch("https://formspree.io/f/xrgnpryo", {
+    fetch("https://formspree.io/f/mjvnebjr", {
         method: "POST",
         body: new FormData(event.target),
         headers: {
             'Accept': 'application/json'
         }
     }).then(() => {
-        window.location.href = "./sendMail.html";
+        window.location.href = "./send_mail.html";
     }).catch((error) => {
         console.log(error);
     });
 }
+
