@@ -110,9 +110,16 @@
     height: 2rem;
     width: 9rem;
     background-color: var(--green);
+    transition: background-color 150ms ease-in-out;
     color: var(--fontColorSecond);
     border: 0;
     cursor: pointer;
+}
+
+
+.recipe__button:hover {
+    transition: background-color 150ms ease-in-out;
+    background-color: var(--buttonBackgroundcolorHover);
 }
 
 
