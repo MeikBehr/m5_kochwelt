@@ -8,7 +8,14 @@
 }
 
 
+.main__dish-container > a {
+    padding: 0;
+}
+
+
 .main__dish__image-container {
+    width: 28.125rem;
+    height: 18.75rem;
     overflow: hidden;
     border-radius: var(--borderRadius);
     box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
@@ -37,10 +44,11 @@
 }
 
 
-.main__dish__recipe-of-the-day h1{
+.main__dish__recipe-of-the-day h1 {
     font-size: 1.75rem;
     font-weight: 600;
     padding-bottom: 2rem;
+    line-height: 1.5rem;
 }
 
 
@@ -50,7 +58,9 @@
 }
 
 
-
+.main__dish__recipe-of-the-day a {
+    color: var(--buttonColor);
+}
 
 
 .main__dish-btn {
@@ -99,6 +109,11 @@
     display: flex;
     justify-content: space-between;
     gap: 10rem;
+}
+
+
+.choose-recipe__links__container > a {
+    padding: 0;
 }
 
 
