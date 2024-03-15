@@ -9,9 +9,6 @@ function init () {
 }
 
 
-
-
-
 /**
  * Give ID as String into this function so it will search your document for this ID, clear ist and returns the result
  * @param {string} ID 
@@ -23,8 +20,6 @@ function getContainerForHtmlAndClearIt(ID) {
 }
 
 
-
-
 /**
  * This function is used to render the Head-Element of the document on every Page
  */
@@ -33,8 +28,6 @@ function renderHead() {
 	container.innerHTML = "";
 	container.innerHTML += headHTML();
 }
-
-
 
 
 /**
@@ -55,11 +48,6 @@ function renderFooter() {
 };
 
 
-
-
-
-
-
 /**
  * This function is used to render the HTML for the Footer-Element of the document
  */
@@ -67,11 +55,6 @@ function renderMain() {
 	const container = getContainerForHtmlAndClearIt('main');
 	container.innerHTML += mainHTML();
 };
-
-
-
-
-
 
 
 /**
@@ -105,6 +88,9 @@ function hideOverlay() {
 	card_overlay.classList.add('d-none');
 	document.body.classList.remove('no-scroll');
 }
+
+
+
 
 
 
