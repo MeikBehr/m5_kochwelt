@@ -144,7 +144,6 @@
 
 .contact__paragraph {
     margin-bottom: 1rem;
-    /* text-shadow: 0 0 0.25rem rgba(0,0,0,0.5); */
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
@@ -170,12 +169,10 @@
 .form__group {
     position: relative;
     margin-bottom: 1.5rem;
-    /* min-width: 100%; */
-    
-    .form__horizontal > & {
-        /* margin-right: 1.5rem; */
-        margin-bottom: 1rem;
-    }
+}
+
+.form__horizontal > .form__group {
+    margin-bottom: 1rem;
 }
 
 
@@ -183,11 +180,11 @@
     position: relative;
     margin-bottom: 1.5rem;
     min-width: 100%;
-    
-    .form__horizontal > & {
-        /* margin-right: 1.5rem; */
-        margin-bottom: 1rem;
-    }
+}
+
+
+.form__horizontal > .form__group__textarea {
+    margin-bottom: 1rem;
 }
 
 
