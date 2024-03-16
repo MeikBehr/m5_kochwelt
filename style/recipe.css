@@ -13,6 +13,11 @@
 }
 
 
+.recipe__title__img {
+    background-image: url(../img/salad.jpg);
+}
+
+
 .recipe__title__img,
 .recipe__title__img__meik,
 .recipe__title__img__oliver,
@@ -205,8 +210,10 @@
 }
 
 
-.recipe__author-img {
-    background-image: url(../img/profile.png);
+.recipe__author-img,
+.recipe__author-img__meik,
+.recipe__author-img__oliver,
+.recipe__author-img__anton {
     background-size: cover;
     height: 4rem;
     width: 4rem;
@@ -214,3 +221,6 @@
 }
 
 
+.recipe__author-img__meik {
+    background-image: url(../img/author_meik.jpg);
+}
