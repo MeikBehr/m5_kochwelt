@@ -53,6 +53,7 @@ https://codepen.io/stephenpaton-tech/full/JjRvGmY
     --fontSizeHeadlin: 1.5rem;
     --fontSizeHeader: 1.125rem;
     --marginLRContent: 4rem;
+    --sizeMobileImage: 15rem;
 }
 
 
@@ -219,12 +220,24 @@ button {
     font-size: var(--fontSizeHeader);
     line-height: calc(var(--fontSizeMain) * 1.125);
     font-weight: 600;
-    margin-right: var(--marginLRContent);
-    margin-bottom: 1rem;
     color: var(--fontColorHeader);
     gap: 1rem;
+    margin-bottom: 1rem;
     margin-right: var(--marginLRContent);
 }
+
+
+.nav-mobile-hidden {
+    display: flex;
+    align-items: end;
+    height: 100%;
+    font-size: var(--fontSizeHeader);
+    line-height: calc(var(--fontSizeMain) * 1.125);
+    font-weight: 600;
+    color: var(--fontColorHeader);
+    gap: 1rem;
+}
+
 
 
 .header__nav a:hover,
@@ -243,6 +256,8 @@ button {
 
 .mobile-nav-show {
     display: none;
+    position: relative;
+    z-index: 1000;
 }
 
 
@@ -275,8 +290,8 @@ button {
     top: 100%;
     right: 0;
     border: 1px solid #ccc;
-    z-index: 1000;
     width: 12rem;
+    z-index: 1000;
 }
 
 

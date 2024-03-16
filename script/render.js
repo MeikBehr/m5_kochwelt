@@ -29,7 +29,7 @@ function headerHTML() {
 		</a>
 	</figure>
 	<nav class="header__nav">
-		<div class="header__nav nav-mobile-hidden">
+		<div class="nav-mobile-hidden">
 			<div>
 				<a href="./index.html">Start</a>
 			</div>
