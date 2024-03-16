@@ -29,7 +29,7 @@ function headerHTML() {
 		</a>
 	</figure>
 	<nav class="header__nav">
-		<div class="header__nav-wide">
+		<div class="header__nav nav-mobile-hidden">
 			<div>
 				<a href="./index.html">Start</a>
 			</div>
@@ -43,6 +43,21 @@ function headerHTML() {
 				<a href="#">Impressum</a>
 			</div>
 		</div>
+
+		<!-- Navigationsleiste für MOBILE Geräte -->
+		<div class="mobile-nav-show" type="radio">
+            <div id="mobile-nav-button" alt="Button für Menu">
+                <div id="mobile-nav-content">  
+                    <ul id="mobile-nav-list">
+                        <li><a href="./index.html">Start</a></li>
+                        <li><a href="./recipe.html">Rezept des Tages</a></li>
+                        <li><a href="#" id="linkToContactForm" onclick="showContactOverlay()">Kontakt</a></li>
+						<li><a href="#">Impressum</a></li>
+                      </ul>
+                </div>
+            </div>
+        </div>
+
 	</nav>
     `;
 }
