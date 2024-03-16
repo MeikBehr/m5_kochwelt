@@ -5,4 +5,7 @@ Disallow: /fonts/
 Disallow: /script/
 Disallow: /style/
 Disallow: /recipe.html
+Disallow: /recipe_anton.html
+Disallow: /recipe_meik.html
+Disallow: /recipe_oliver.html
 Disallow: /send_mail.html
