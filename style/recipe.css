@@ -13,14 +13,32 @@
 }
 
 
-.recipe__title__img {
+.recipe__title__img,
+.recipe__title__img__meik,
+.recipe__title__img__oliver,
+.recipe__title__img__anton {
     height: 10.5rem;
-    background-image: url(../img/salad.jpg);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     margin-bottom: 2rem;
     border-radius: 0.75rem;
     box-shadow: 0.18rem 0.18rem 0.18rem rgba(0, 0, 0, 0.3);
+}
+
+
+.recipe__title__img__meik {
+    background-image: url(../img/shrimps_wide.jpg);
+}
+
+
+.recipe__title__img__oliver {
+    background-image: url(../img/salad.jpg);
+}
+
+
+.recipe__title__img__anton {
+    background-image: url(../img/salad.jpg);
 }
 
 

@@ -113,6 +113,9 @@
 
 
 .choose-recipe__links__container > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 0;
 }
 

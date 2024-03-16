@@ -197,6 +197,11 @@ button {
 }
 
 
+.header__logo__container > a {
+    padding: 0;
+}
+
+
 .header__logo {
     width: 16.5rem;
 }
@@ -244,7 +249,6 @@ button {
 }
 
 
-
 .footer a:visited {
     color: var(--fontColorSecond);
 }
@@ -267,9 +271,15 @@ button {
     margin-left: var(--marginLRContent);
 }
 
+
 .footer__logo img {
     width: 15rem;
     filter: invert();
+}
+
+
+.footer__logo a {
+    padding: 0;
 }
 
 
@@ -279,12 +289,12 @@ button {
 }
 
 
-
 .footer__nav {
     display: flex;
     flex-direction: row;
     margin-right: var(--marginLRContent);
 }
+
 
 .footer__nav__legals {
     display: flex;
@@ -292,6 +302,7 @@ button {
     gap: 1rem;
     color: var(--fontColorSecond);
 }
+
 
 .footer__nav_socialMedia {
     margin-left: 5rem;
