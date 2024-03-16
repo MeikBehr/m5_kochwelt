@@ -117,7 +117,6 @@ body {
 a {
     text-decoration: none;
     cursor: pointer;
-    padding: 4px 4px;
 }
 
 
@@ -214,17 +213,25 @@ button {
 
 
 .header__nav {
-    height: 100%;
     display: flex;
     align-items: end;
+    height: 100%;
     font-size: var(--fontSizeHeader);
     line-height: calc(var(--fontSizeMain) * 1.125);
     font-weight: 600;
-    gap: 1rem;
     margin-right: var(--marginLRContent);
     margin-bottom: 1rem;
     color: var(--fontColorHeader);
 }
+
+
+.header__nav-wide {
+    display: flex;
+    align-items: end;
+    gap: 1rem;
+}
+
+
 
 
 .header__nav a:hover,
@@ -233,6 +240,17 @@ button {
     color: var(--fontColorHover);
     border-bottom: 4px solid var(--fontColorHover);
 }
+
+
+.header__nav-small {
+
+}
+
+
+
+
+
+
 
 
 
