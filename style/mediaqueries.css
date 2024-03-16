@@ -180,6 +180,13 @@
         width: 100%;
     }
 
+    .recipe__info {
+        flex-direction: column;
+    }
+
+    .recipe__table__amount {
+        vertical-align: top;
+    }
 }
 
 
@@ -210,6 +217,13 @@
     .form__textarea {
         height: 15rem;
     }
+
+    .recipe__main > h1 {
+        text-align: center;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+    }
+
 }
 
 
@@ -240,6 +254,18 @@
         gap: 1rem
     }
 
+    .recipe__input {
+        flex: 0 0 6rem;
+    }
+
+    .recipe__button {
+        width: 6rem;
+    }
+
+    .contact__heading {
+        line-height: 1.5rem;
+    }
+
 }
 
 @media (max-width: 380px) {
@@ -250,4 +276,5 @@
         align-items: center;
         gap: 1rem;
     }
+
 }
