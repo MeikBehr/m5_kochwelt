@@ -76,7 +76,7 @@ function footerHTML() {
 		<section class="footer__nav__legals">
 			<a href="./impressum.html">Impressum</a>
 			<p>|</p>
-			<a href="#">Datenschutz</a>
+			<a href="./datenschutz.html">Datenschutz</a>
 		</section>
 		<section class="footer__nav_socialMedia">
 			<a href="https://www.facebook.com/?lang=de">

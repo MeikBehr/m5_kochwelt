@@ -200,7 +200,7 @@
 
 /* ========== I M P R E S S U M ========== */
 
-.impressum{
+.impressum {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -249,3 +249,59 @@
     margin-top: 2rem; 
     margin-bottom: 1rem
 }
+
+
+/* ========== D A T E N S C H U T Z ========== */
+
+
+.privacy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem var(--marginLRContent);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    min-height: calc(100dvh - var(--footerHeight)  - var(--headerHeight) - 4rem);
+    /* height: calc(100dvh - var(--footerHeight)  - var(--headerHeight) - 4rem); */
+}
+
+
+.privacy h1 {
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+}
+
+
+.privacy h2 {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+
+.privacy h3 {
+    font-size: 1.125rem;
+}
+
+
+.privacy a {
+    color: var(--fontColorMain);
+}
+
+
+.privacy a:hover {
+    font-weight: bold;
+    color: var(--green);
+}
+
+
+.privacy p {
+    line-height: 1.25rem;
+}
+
+
+.privacy hr {
+    margin-top: 2rem; 
+    margin-bottom: 1rem
+}
+
+
