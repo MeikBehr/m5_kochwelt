@@ -144,7 +144,6 @@ function setEventListenerRecipe() {
     const inputField = document.getElementById('recipe__input');
     inputField.addEventListener('keydown', (event) => {
 		if (event.key === "Enter") {
-            console.log('ENTER');
 			updateIngredients();
 		}
 	});

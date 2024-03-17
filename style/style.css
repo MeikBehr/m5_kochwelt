@@ -160,7 +160,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: clamp(10rem, 65dvh, 200rem);
+    height: calc(100dvh - var(--headerHeight) - var(--footerHeight));
     width: 100%;
 }
 
