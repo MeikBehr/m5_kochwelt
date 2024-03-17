@@ -60,7 +60,8 @@
     align-items: center;
     position: relative;
     max-width: 40rem;
-    height: clamp(20rem, 80%, 90vh);
+    max-height: 95dvh;
+    padding-bottom: 3rem;
     border-radius: var(--borderRadius);
     box-shadow: 4px 4px 16px rgba(0,0,0,1);
     animation-name: contact__container--fade-in;
@@ -69,10 +70,9 @@
     animation-delay: 250ms;
     animation-iteration-count: 1;
     animation-fill-mode: backwards;
-
     color: black;
     background-color: rgba(255,255,255,0.9);
-
+    overflow: scroll;
 }
 
 

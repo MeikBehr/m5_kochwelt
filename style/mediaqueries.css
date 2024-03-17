@@ -165,6 +165,15 @@
         align-items: center;
     }
 
+    .contact__content p,
+    .contact__content h3 {
+        width: 75%;
+    }
+
+    .contact__content h3 {
+        line-height: 1.5rem;
+    }
+
     .form__horizontal {
         display: flex;
         flex-direction: column;
@@ -187,6 +196,7 @@
     .recipe__table__amount {
         vertical-align: top;
     }
+
 }
 
 
@@ -222,6 +232,11 @@
         text-align: center;
         font-size: 1.25rem;
         line-height: 1.5rem;
+    }
+
+    .impressum h2 {
+        font-size: 1.125rem;
+        line-height: 1.25rem;
     }
 
 }

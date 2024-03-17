@@ -207,6 +207,7 @@
     padding: 1rem var(--marginLRContent);
     margin-top: 2rem;
     margin-bottom: 2rem;
+    min-height: calc(100dvh - var(--footerHeight)  - var(--headerHeight) - 4rem);
     /* height: calc(100dvh - var(--footerHeight)  - var(--headerHeight) - 4rem); */
 }
 
