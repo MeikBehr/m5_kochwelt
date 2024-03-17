@@ -114,24 +114,52 @@ function sendMail(event){﻿
 
 
 /**
+ * This function checks, if the Value of the Inputfield is empty (= Alert) or not. If not it will transform the string into a number, using parseFloat and return is.
+ * @param {string} Value 
+ * @returns {number}
+ */
+function checkIfInputIsEmpty(Value) {
+	if (Value == '') {
+		console.log("Portionen leer");
+		alert('Sie haben keine Eingabe für die Anzahl der Portionen gemacht!');
+		return;
+	} else {
+		return Value = parseFloat(Value);
+	}
+}
+
+
+/**
+ * This function will iterate through all elements of actualAmounts, recalculating the new values of each ingredients and inject the html-file with the new values + units.
+ * @param {array} actualAmounts 
+ * @param {number} originalAmount 
+ * @param {number} newPortionsValue 
+ */
+function iterateThroughAllIngredientsAndChangeValues(actualAmounts, originalAmount, newPortionsValue) {
+	actualAmounts.forEach((element) => {
+		if (element.innerHTML !== '') {
+			const amount = parseFloat(element.innerHTML);
+			const unit = element.innerHTML.split(" ").slice(1).join(" ");
+			const amountNew = amount * newPortionsValue / originalAmount;
+			const newAmountWithUnits = amountNew + " "  + unit;
+			element.innerHTML = newAmountWithUnits;
+		}
+	})
+}
+
+
+/**
  * This function checks, if the value of the inputfield is between 1 and 20. If so, it calculates the new amount of 
  * ingredients  and updates the data-original-amount with the value from the input field for further calculations.
  */
 function updateIngredients() {
-    const newPortionsValue = parseFloat(document.getElementById("recipe__input").value);
+	let newPortionsValue = document.getElementById("recipe__input").value;
+	checkIfInputIsEmpty(newPortionsValue);
     if (newPortionsValue > 0 && newPortionsValue <= 20) {
         const actualAmounts = document.querySelectorAll('.recipe__table__amount');
         const table = document.querySelector('.recipe__table');
         const originalAmount = parseFloat(table.getAttribute('data-original-amount'));
-        actualAmounts.forEach((element) => {
-            if (element.innerHTML !== '') {
-                const amount = parseFloat(element.innerHTML);
-                const unit = element.innerHTML.split(" ").slice(1).join(" ");
-                const amountNew = amount * newPortionsValue / originalAmount;
-                const newAmountWithUnits = amountNew + " "  + unit;
-                element.innerHTML = newAmountWithUnits;
-            }
-        })
+        iterateThroughAllIngredientsAndChangeValues(actualAmounts, originalAmount, newPortionsValue);
         table.setAttribute('data-original-amount', `${newPortionsValue}`);
     }
 }
