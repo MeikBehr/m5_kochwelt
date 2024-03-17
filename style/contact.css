@@ -76,13 +76,6 @@
 }
 
 
-@media (max-width: 70%) {
-    #contact__container {
-        flex-direction: column; 
-    }
-}
-
-
 @keyframes contact__container--fade-in {
     0% {
         transform: translate(0, calc(-60vh - 50%));
