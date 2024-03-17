@@ -40,7 +40,7 @@ function headerHTML() {
 				<a href="#" id="linkToContactForm" onclick="showContactOverlay()">Kontakt</a>
 			</div>
 			<div>
-				<a href="#">Impressum</a>
+				<a href="./impressum.html">Impressum</a>
 			</div>
 		</div>
 
@@ -74,7 +74,7 @@ function footerHTML() {
 	</section>
 	<nav class="footer__nav">
 		<section class="footer__nav__legals">
-			<a href="#">Impressum</a>
+			<a href="./impressum.html">Impressum</a>
 			<p>|</p>
 			<a href="#">Datenschutz</a>
 		</section>

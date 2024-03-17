@@ -195,3 +195,56 @@
     object-fit: cover;
     box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
 }
+
+
+
+/* ========== I M P R E S S U M ========== */
+
+.impressum{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem var(--marginLRContent);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    /* height: calc(100dvh - var(--footerHeight)  - var(--headerHeight) - 4rem); */
+}
+
+
+.impressum h1 {
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+}
+
+
+.impressum h2 {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+
+.impressum h3 {
+    font-size: 1.125rem;
+}
+
+
+.impressum a {
+    color: var(--fontColorMain);
+}
+
+
+.impressum a:hover {
+    font-weight: bold;
+    color: var(--green);
+}
+
+
+.impressum p {
+    line-height: 1.25rem;
+}
+
+
+.impressum hr {
+    margin-top: 2rem; 
+    margin-bottom: 1rem
+}

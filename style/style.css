@@ -54,6 +54,8 @@ https://codepen.io/stephenpaton-tech/full/JjRvGmY
     --fontSizeHeader: 1.125rem;
     --marginLRContent: 4rem;
     --sizeMobileImage: 15rem;
+    --headerHeight: 7rem;
+    --footerHeight: 10rem;
 }
 
 
@@ -178,7 +180,7 @@ button {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 7rem;
+    height: var(--headerHeight);
     box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.1);
 }
 
@@ -336,7 +338,7 @@ li:hover a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 10rem;
+    height: var(--footerHeight);
     background-color: var(--footer_background);
     color: var(--fontColorSecond);
 }
