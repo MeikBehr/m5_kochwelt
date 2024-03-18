@@ -7,7 +7,8 @@ function init (main) {
 	renderHead();
 	renderHeader();
 	renderFooter();
-	main ? progressBar() : '';
+	// main ? progressBar() : '';
+	main ? startSlideshow() : '';
 	setEventListener();
 }
 
@@ -192,7 +193,80 @@ function progressBar() {
 			width++;
 			bar.style.width = width + '%';
 		}
-	}, 10);
-	console.log('width: ' + width);
+	}, 50);
 }
 
+
+let id = 0;
+
+function slideShow() {
+    const image = document.getElementById('recipeOfTheDay');
+    const currentSrc = image.src;
+    const imageSources = [
+        '../img/salad.jpg',
+        '../img/shrimps.jpg',
+        '../img/wok.jpg',
+    ];
+    const nextSrc = imageSources[id];
+	id++;
+	if (id >= imageSources.length) {id = 0;}
+
+    if (nextSrc !== currentSrc) {
+        image.src = nextSrc;
+    }
+}
+
+
+function startSlideshow () {
+	setInterval(() => {
+		slideShow();
+		progressBar();
+	}, 5000);
+}
+
+
+
+
+
+
+/*
+
+
+function progressBar() {
+	const bar = document.getElementById('progressBar');
+	let width = 1;
+	let id = setInterval(() => {
+		if (width >= 100) {
+			clearInterval(id);
+		} else {
+			width++;
+			bar.style.width = width + '%';
+		}
+	}, 10);
+}
+
+
+function slideShow() {
+    const image = document.getElementById('recipeOfTheDay');
+    const currentSrc = image.src;
+    const imageSources = [
+        '../img/salad.jpg',
+        '../img/shrimps.jpg',
+        '../img/wok.jpg',
+    ];
+    const nextSrc = imageSources[Math.floor(Math.random() * imageSources.length)];
+
+    // Sicherstellen, dass das nächste Bild nicht dasselbe wie das aktuelle ist
+    if (nextSrc !== currentSrc) {
+        image.src = nextSrc;
+    }
+}
+
+// Funktion starten, die das Bild alle 10 Sekunden ändert
+setInterval(() => {
+	slideShow();
+	progressBar();
+}, 1000);
+	
+
+*/
