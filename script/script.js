@@ -3,10 +3,11 @@
 /**
  * This is the initialising function, started by the body onload
  */
-function init () {
+function init (main) {
 	renderHead();
 	renderHeader();
 	renderFooter();
+	main ? progressBar() : '';
 	setEventListener();
 }
 
@@ -176,3 +177,22 @@ function setEventListenerRecipe() {
 		}
 	});
 }
+
+
+/* ========= testing Progressbar ========= */
+
+
+function progressBar() {
+	const bar = document.getElementById('progressBar');
+	let width = 1;
+	let id = setInterval(() => {
+		if (width >= 100) {
+			clearInterval(id);
+		} else {
+			width++;
+			bar.style.width = width + '%';
+		}
+	}, 10);
+	console.log('width: ' + width);
+}
+

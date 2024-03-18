@@ -21,7 +21,7 @@
         <title>Kochwelt - Gruppe 107</title>
     </head>
 
-    <body onload="init()">
+    <body onload="init(true)">
 
 		<div class="mainframe">
 
@@ -32,11 +32,14 @@
 
 				<section>
 					<div class="main__dish-container">
-						<a href="./recipe.html">
-							<div class="main__dish__image-container">
-								<img class="main__dish__image" src="./img/croissant.jpg">
-							</div>
-						</a>
+						<div>
+							<a href="./recipe.html">
+								<div class="main__dish__image-container">
+									<img class="main__dish__image" src="./img/croissant.jpg">
+								</div>
+							</a>
+							<div id="progressBar"></div>
+						</div>
 						<div class="main__dish__recipe-of-the-day">
 							<div>
 								<h1>Rezept des Tages</h1>

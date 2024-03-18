@@ -8,7 +8,7 @@
 }
 
 
-.main__dish-container > a {
+.main__dish-container a {
     padding: 0;
 }
 
@@ -310,3 +310,10 @@
 }
 
 
+#progressBar {
+    margin-top: 0.5rem;
+    height: 0.5rem;
+    border-radius: 0.25rem;
+    background-color: var(--green);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
