@@ -1,7 +1,9 @@
 "use strict";
 
 /**
- * This is the initialising function, started by the body onload
+ * Initializes the application.
+ * Renders the header, footer, and head content. Starts interval functions if the main parameter is true. Sets event listeners.
+ * @param {boolean} main - Indicates whether the main content should be loaded.
  */
 function init (main) {
 	renderHead();
@@ -183,7 +185,7 @@ function setEventListenerRecipe() {
 
 
 /**
- * Gets the index for the next element in the array, wrapping around if necessary.
+ * This function gets the index for the next element in the array, wrapping around if necessary.
  * @param {number} currentIndex - current index.
  * @param {Array} array - array containing the elements.
  * @returns {number} - index for the next element.
@@ -194,7 +196,7 @@ function getNextIndex(currentIndex, array) {
 
 
 /**
- * Changes the current image and updates the index.
+ * This function changes the current image and updates the index.
  * @returns {string} - path of the new image.
  */
 function changeImage() {
@@ -205,7 +207,7 @@ function changeImage() {
 
 
 /**
- * Changes the current recipe HTML page and updates the index.
+ * This function changes the current recipe HTML page and updates the index.
  * @returns {string} - path to new recipe page.
  */
 function changeRecipe() {
@@ -216,7 +218,7 @@ function changeRecipe() {
 
 
 /**
- * Changes the current recipe text and updates the index.
+ * This function changes the current recipe text and updates the index.
  * @returns {string} - new recipe text.
  */
 function changeRecipeText() {
@@ -227,7 +229,7 @@ function changeRecipeText() {
 
 
 /**
- * Changes the current recipe title and updates the index.
+ * This function changes the current recipe title and updates the index.
  * @returns {string} - new recipe title.
  */
 function changeRecipeTitle() {
@@ -238,7 +240,7 @@ function changeRecipeTitle() {
 
 
 /**
- * Changes the content of the HTML element with the specified ID using an animation.
+ * This function changes the content of the HTML element with the specified ID using an animation.
  * @param {string} containerId - ID of the HTML element to change.
  * @param {function} changeFunction - function to get the new content.
  */
@@ -253,7 +255,7 @@ function changeContent(containerId, changeFunction) {
 
 
 /**
- * Changes the image in the HTML element with the ID 'imgChange'.
+ * This function changes the image in the HTML element with the ID 'imgChange'.
  */
 function changeRezeptdesTages() {
     const container = document.getElementById('imgChange');
@@ -262,7 +264,7 @@ function changeRezeptdesTages() {
 
 
 /**
- * Changes the links in the HTML elements with the IDs 'linkChange' and 'linkChange2'.
+ * This function changes the links in the HTML elements with the IDs 'linkChange' and 'linkChange2'.
  */
 function changeRezeptdesTagesLink() {
     const container = document.getElementById('linkChange');
@@ -274,7 +276,7 @@ function changeRezeptdesTagesLink() {
 
 
 /**
- * Changes the text in the HTML element with the ID 'recipeText' with a fade-in animation.
+ * This function changes the text in the HTML element with the ID 'recipeText' with a fade-in animation.
  */
 function changeRezeptdesTagesText() {
     changeContent('recipeText', () => changeRecipeText());
@@ -282,7 +284,7 @@ function changeRezeptdesTagesText() {
 
 
 /**
- * Changes the title in the HTML element with the ID 'recipeTitle' with a fade-in animation.
+ * This function changes the title in the HTML element with the ID 'recipeTitle' with a fade-in animation.
  */
 function changeRezeptdesTagesTitle() {
     changeContent('recipeTitle', () => changeRecipeTitle());
@@ -291,35 +293,38 @@ function changeRezeptdesTagesTitle() {
 
 
 /**
- * Animates a progress bar by increasing its width from 0% to 100% in 0.5% increments
- * @function progressBar
+ * This function animates the progress bar width from 0% to 100% within the specified loop time in 0.5% increments.
+ * @param {function} callback - Optional callback function to be executed when animation is complete.
  */
-function progressBar() {
-	const bar = document.getElementById('progressBar');
-	let width = 1;
-	let id = setInterval(() => {
-		if (width >= 100) {
-			clearInterval(id);
-		} else {
-			width = width + 0.5;
-			bar.style.width = width + '%';
-		}
-	}, (loopTime / 200));
+function animateProgressBar(callback) {
+    const bar = document.getElementById('progressBar');
+    let width = 1;
+    let id = setInterval(() => {
+        if (width >= 100) {
+            clearInterval(id);
+            if (callback) {
+                callback();
+            }
+        } else {
+            width = width + 0.5;
+            bar.style.width = width + '%';
+        }
+    }, (loopTime / 200));
 }
 
 
 /**
- * Starts interval functions to update content periodically (loopTime in ms).
- * @function startIntervalFunctions
+ * This function starts interval functions to execute tasks periodically.
+ * Calls 'animateProgressBar' function with a callback to execute additional tasks once the progress bar animation is complete.
  */
 function startIntervalFunctions() {
     setInterval(() => {
-        changeRezeptdesTagesText();
-        changeRezeptdesTagesTitle();
-        progressBar();
-        changeRezeptdesTages();
-        changeRezeptdesTagesLink();
+        animateProgressBar(() => {
+            changeRezeptdesTagesText();
+            changeRezeptdesTagesTitle();
+            changeRezeptdesTages();
+            changeRezeptdesTagesLink();
+        });
     }, loopTime);
 }
-
 

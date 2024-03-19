@@ -11,10 +11,10 @@ const recipeText = [
 const recipeTitle = [" - Schnelle Käsespätzle", " - Spaghetti Carbonara", " - Panierte Shrimps mit Ranchdip"]
 
 
-const loopTime = 5000;
+const loopTime = 3000;
 
-let imgIndex = 0,
-    recipeIndex = 0,
-    recipeTextIndex = 0,
-    recipeTitleIndex = 0;
+let imgIndex = 1,
+    recipeIndex = 1,
+    recipeTextIndex = 1,
+    recipeTitleIndex = 1;
 
