@@ -35,7 +35,7 @@ function headerHTML() {
 				<a href="./index.html">Start</a>
 			</div>
 			<div>
-				<a href="./recipe.html">Rezept des Tages</a>
+				<a id="linkChange3" href="./recipe_anton.html">Rezept des Tages</a>
 			</div>
 			<div>
 				<a href="#" id="linkToContactForm" onclick="showContactOverlay()">Kontakt</a>
@@ -78,6 +78,8 @@ function footerHTML() {
 			<a href="./impressum.html">Impressum</a>
 			<p>|</p>
 			<a href="./datenschutz.html">Datenschutz</a>
+			<p>|</p>
+			<a href="#">Über uns</a>
 		</section>
 		<section class="footer__nav_socialMedia">
 			<a href="https://www.facebook.com/?lang=de">
@@ -111,9 +113,13 @@ function contactHTML() {
 				</div>
                 <div class="form__horizontal">
 					<div class="form__group__textarea">
-						<textarea name="message" class="form__textarea" id="contact-message" required></textarea>
+						<textarea name="message" class="form__textarea" id="contact-message" placeholder="Nachricht" required></textarea>
 						<label class="form__label" for="contact-message">Nachricht</label>
 					</div>
+				</div>
+				<div class="contact__submit-container">
+					<label for="form__checkbox">Hiermit stimme ich balbla</label>
+					<input id="form__checkbox" type="checkbox" class="button--contact" value="Anfrage abschicken" required>
 				</div>
 				<div class="contact__submit-container">
 					<input type="submit" class="button--contact" value="Anfrage abschicken">

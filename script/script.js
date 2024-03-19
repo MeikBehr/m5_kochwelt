@@ -264,14 +264,16 @@ function changeRezeptdesTages() {
 
 
 /**
- * This function changes the links in the HTML elements with the IDs 'linkChange' and 'linkChange2'.
+ * This function changes the links in the HTML elements with the IDs 'linkChange' and 'linkChange2' and 'linkChange3'.
  */
 function changeRezeptdesTagesLink() {
     const container = document.getElementById('linkChange');
     const container2 = document.getElementById('linkChange2');
+    const container3 = document.getElementById('linkChange3');
     const recipeHref = changeRecipe();
     container.href = recipeHref;
     container2.href = recipeHref;
+    container3.href = recipeHref;
 }
 
 

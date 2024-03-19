@@ -10,7 +10,29 @@ const recipeText = [
 
 const recipeTitle = [" - Schnelle Käsespätzle", " - Spaghetti Carbonara", " - Panierte Shrimps mit Ranchdip"]
 
-const loopTime = 3000;
+
+const recipes = [
+
+    {
+        image : "",
+        url : "",
+        text: ""
+
+    },
+
+    {
+        image : "",
+        url : "",
+        text: ""
+
+    },
+
+
+
+]
+
+
+const loopTime = 5000;
 
 let imgIndex = 1,
     recipeIndex = 1,
