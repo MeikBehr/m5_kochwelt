@@ -117,9 +117,9 @@ function contactHTML() {
 						<label class="form__label" for="contact-message">Nachricht</label>
 					</div>
 				</div>
-				<div class="contact__submit-container">
-					<label for="form__checkbox">Hiermit stimme ich balbla</label>
+				<div class="contact__submit-container__checkbox">
 					<input id="form__checkbox" type="checkbox" class="button--contact" value="Anfrage abschicken" required>
+					<label for="form__checkbox">Ich habe die Datenschutzerklärung gelesen.</label>
 				</div>
 				<div class="contact__submit-container">
 					<input type="submit" class="button--contact" value="Anfrage abschicken">

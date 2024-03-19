@@ -128,6 +128,19 @@
 }
 
 
+.contact__submit-container__checkbox > label {
+    padding-left: 0.5rem;
+}
+
+
+.contact__submit-container__checkbox {
+    display: flex;
+    justify-content: center;
+    text-align: right;    
+    margin-bottom: 1rem;
+}
+
+
 .contact__submit-container {
     display: flex;
     justify-content: center;
@@ -223,7 +236,7 @@
 
 .form__input:focus ~ .form__label,
 .form__input[placeholder]:not(:placeholder-shown)  ~ .form__label {
-    transform: scale(0.75) translate(0.3rem, 2.7rem);
+    transform: scale(0.75) translate(-0.3rem, -2.7rem);
 }
 
 
