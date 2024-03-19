@@ -298,6 +298,7 @@ function changeRezeptdesTagesTitle() {
  */
 function animateProgressBar(callback) {
     const bar = document.getElementById('progressBar');
+    bar.style.display = 'flex';
     let width = 1;
     let id = setInterval(() => {
         if (width >= 100) {
