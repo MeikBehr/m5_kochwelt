@@ -182,6 +182,9 @@ function setEventListenerRecipe() {
 
 
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 /* ========= Slideshow Recipe: Image & Text ========= */
 
@@ -190,6 +193,7 @@ let imgIndex = 0;
 let recipeIndex = 0;
 let recipeTextIndex = 0;
 let recipeTitleIndex = 0;
+const loopTime = 5000;
 
 
 /* sucht sich aus der arry das bild raus */
@@ -233,7 +237,8 @@ function changeRecipeTitle() {
 
 
 
-///////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -254,26 +259,14 @@ function changeRezeptdesTagesLink(){
 } 
 
 
-/* rendert den text jede 5sek */
-function changeRezeptdesTagesText(){
-	const container = document.getElementById('recipeText');
-	container.style.opacity = 0;
-	setTimeout(function() {
-	container.innerText = changeRecipeText();
-	container.style.opacity = 1;
- }, 500);
-} 
-
-
-/* rendert den titel jede 5sek */
-function changeRezeptdesTagesTitle(){
-	const container = document.getElementById('recipeTitle');
-	container.style.opacity = 0;
-	setTimeout(function() {
-	container.innerText = changeRecipeTitle();
-	container.style.opacity = 1;
- }, 500);
-} 
+function changeContent(containerId, changeFunction) {
+    const container = document.getElementById(containerId);
+    container.style.opacity = 0;
+    setTimeout(function() {
+        container.innerText = changeFunction();
+        container.style.opacity = 1;
+    }, 500);
+}
 
 
 function progressBar() {
@@ -286,111 +279,16 @@ function progressBar() {
 			width++;
 			bar.style.width = width + '%';
 		}
-	}, 50);
-}
-
-setInterval(changeRezeptdesTages, 5000);
-setInterval(changeRezeptdesTagesLink, 5000);
-setInterval(changeRezeptdesTagesText, 5000);
-setInterval(changeRezeptdesTagesTitle, 5000);
-setInterval(progressBar, 5000);
-
-
-
-
-
-
-
-
-
-
-/*    O L D   C O D E
-
-
-function progressBar() {
-	const bar = document.getElementById('progressBar');
-	let width = 1;
-	let id = setInterval(() => {
-		if (width >= 100) {
-			clearInterval(id);
-		} else {
-			width++;
-			bar.style.width = width + '%';
-		}
-	}, 50);
+	}, (loopTime / 100));
 }
 
 
-let id = 0;
+setInterval(() => changeContent('recipeText', changeRecipeText), loopTime);
+setInterval(() => changeContent('recipeTitle', changeRecipeTitle), loopTime);
 
-function slideShow() {
-    const image = document.getElementById('recipeOfTheDay');
-    const currentSrc = image.src;
-    const imageSources = [
-        '../img/salad.jpg',
-        '../img/shrimps.jpg',
-        '../img/wok.jpg',
-    ];
-    const nextSrc = imageSources[id];
-	id++;
-	if (id >= imageSources.length) {id = 0;}
-
-    if (nextSrc !== currentSrc) {
-        image.src = nextSrc;
-    }
-}
-
-
-function startSlideshow () {
-	setInterval(() => {
-		slideShow();
-		progressBar();
-	}, 5000);
-}
-
- */
+setInterval(progressBar, loopTime);
+setInterval(changeRezeptdesTages, loopTime);
+setInterval(changeRezeptdesTagesLink, loopTime);
 
 
 
-
-/*
-
-
-function progressBar() {
-	const bar = document.getElementById('progressBar');
-	let width = 1;
-	let id = setInterval(() => {
-		if (width >= 100) {
-			clearInterval(id);
-		} else {
-			width++;
-			bar.style.width = width + '%';
-		}
-	}, 10);
-}
-
-
-function slideShow() {
-    const image = document.getElementById('recipeOfTheDay');
-    const currentSrc = image.src;
-    const imageSources = [
-        '../img/salad.jpg',
-        '../img/shrimps.jpg',
-        '../img/wok.jpg',
-    ];
-    const nextSrc = imageSources[Math.floor(Math.random() * imageSources.length)];
-
-    // Sicherstellen, dass das nächste Bild nicht dasselbe wie das aktuelle ist
-    if (nextSrc !== currentSrc) {
-        image.src = nextSrc;
-    }
-}
-
-// Funktion starten, die das Bild alle 10 Sekunden ändert
-setInterval(() => {
-	slideShow();
-	progressBar();
-}, 1000);
-	
-
-*/

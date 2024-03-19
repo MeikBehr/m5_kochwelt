@@ -51,7 +51,7 @@
 .main__dish__recipe-of-the-day h1 {
     font-size: 1.75rem;
     font-weight: 600;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
     line-height: 1.5rem;
 }
 
@@ -59,6 +59,7 @@
 .main__dish__recipe-of-the-day p {
     font-weight: 300;
     font-size: 1rem;
+    padding-bottom: 1rem;
 }
 
 
