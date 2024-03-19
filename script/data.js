@@ -18,3 +18,4 @@ let imgIndex = 1,
     recipeTextIndex = 1,
     recipeTitleIndex = 1;
 
+let intervalID;

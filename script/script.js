@@ -316,15 +316,20 @@ function animateProgressBar(callback) {
 /**
  * This function starts interval functions to execute tasks periodically.
  * Calls 'animateProgressBar' function with a callback to execute additional tasks once the progress bar animation is complete.
+ * Start the interval functions after a delay of 1 second.
+ * This delay allows the page to stabilize before starting the animations.
  */
 function startIntervalFunctions() {
-    setInterval(() => {
-        animateProgressBar(() => {
-            changeRezeptdesTagesText();
-            changeRezeptdesTagesTitle();
-            changeRezeptdesTages();
-            changeRezeptdesTagesLink();
-        });
-    }, loopTime);
+    setTimeout(() => {
+        intervalID = setInterval(() => {
+            animateProgressBar(() => {
+                changeRezeptdesTagesText();
+                changeRezeptdesTagesTitle();
+                changeRezeptdesTages();
+                changeRezeptdesTagesLink();
+            });
+        }, loopTime);
+    }, 1000);
 }
+
 
