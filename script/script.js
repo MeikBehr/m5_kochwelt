@@ -7,8 +7,7 @@ function init (main) {
 	renderHead();
 	renderHeader();
 	renderFooter();
-	// main ? progressBar() : '';
-	// main ? startSlideshow() : '';
+	main ? startIntervalFunctions() : '';
 	setEventListener();
 }
 
@@ -180,95 +179,121 @@ function setEventListenerRecipe() {
 }
 
 
+/* ============== Slideshow Recipe: Image & Text ============== */
 
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * Gets the index for the next element in the array, wrapping around if necessary.
+ * @param {number} currentIndex - current index.
+ * @param {Array} array - array containing the elements.
+ * @returns {number} - index for the next element.
+ */
+function getNextIndex(currentIndex, array) {
+    return (currentIndex + 1) % array.length;
+}
 
 
-/* ========= Slideshow Recipe: Image & Text ========= */
-
-
-let imgIndex = 0;
-let recipeIndex = 0;
-let recipeTextIndex = 0;
-let recipeTitleIndex = 0;
-const loopTime = 5000;
-
-
-/* sucht sich aus der arry das bild raus */
+/**
+ * Changes the current image and updates the index.
+ * @returns {string} - path of the new image.
+ */
 function changeImage() {
-	const currentImg = images[imgIndex]
-	imgIndex = (imgIndex + 1) % images.length;
+    const currentImg = images[imgIndex];
+    imgIndex = getNextIndex(imgIndex, images);
     return currentImg;
 }
 
 
-/* sucht sich aus der arry die html-seite raus */
+/**
+ * Changes the current recipe HTML page and updates the index.
+ * @returns {string} - path to new recipe page.
+ */
 function changeRecipe() {
-	const currentRecipie = recipe[recipeIndex]
-	recipeIndex = (recipeIndex + 1) % recipe.length;
-	return currentRecipie;
+    const currentRecipe = recipe[recipeIndex];
+    recipeIndex = getNextIndex(recipeIndex, recipe);
+    return currentRecipe;
 }
 
-/* sucht sich aus der arry den text raus */
+
+/**
+ * Changes the current recipe text and updates the index.
+ * @returns {string} - new recipe text.
+ */
 function changeRecipeText() {
-	const currentRecipieText = recipeText[recipeTextIndex]
-	recipeTextIndex = (recipeTextIndex + 1) % recipeText.length;
-	return currentRecipieText;
+    const currentRecipeText = recipeText[recipeTextIndex];
+    recipeTextIndex = getNextIndex(recipeTextIndex, recipeText);
+    return currentRecipeText;
 }
 
-/* sucht sich aus der arry den titel raus */
+
+/**
+ * Changes the current recipe title and updates the index.
+ * @returns {string} - new recipe title.
+ */
 function changeRecipeTitle() {
-	const currentRecipieTitle = recipeTitle[recipeTitleIndex]
-	recipeTitleIndex = (recipeTitleIndex + 1) % recipeTitle.length;
-	return currentRecipieTitle;
+    const currentRecipeTitle = recipeTitle[recipeTitleIndex];
+    recipeTitleIndex = getNextIndex(recipeTitleIndex, recipeTitle);
+    return currentRecipeTitle;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-/* rendert das bild jede 5sek */
-function changeRezeptdesTages(){
-	const container = document.getElementById('imgChange');
-	container.src = changeImage();
-} 
-
-
-/* rendert den link jede 5sek */
-function changeRezeptdesTagesLink(){
-	const container = document.getElementById('linkChange');
-	const container2 = document.getElementById('linkChange2');
-	const recipeHref = changeRecipe();
-	container.href = recipeHref;
-	container2.href = recipeHref;
-} 
-
-
+/**
+ * Changes the content of the HTML element with the specified ID using an animation.
+ * @param {string} containerId - ID of the HTML element to change.
+ * @param {function} changeFunction - function to get the new content.
+ */
 function changeContent(containerId, changeFunction) {
     const container = document.getElementById(containerId);
     container.style.opacity = 0;
-    setTimeout(function() {
+    setTimeout(() => {
         container.innerText = changeFunction();
         container.style.opacity = 1;
     }, 500);
 }
 
 
+/**
+ * Changes the image in the HTML element with the ID 'imgChange'.
+ */
+function changeRezeptdesTages() {
+    const container = document.getElementById('imgChange');
+    container.src = changeImage();
+}
+
+
+/**
+ * Changes the links in the HTML elements with the IDs 'linkChange' and 'linkChange2'.
+ */
+function changeRezeptdesTagesLink() {
+    const container = document.getElementById('linkChange');
+    const container2 = document.getElementById('linkChange2');
+    const recipeHref = changeRecipe();
+    container.href = recipeHref;
+    container2.href = recipeHref;
+}
+
+
+/**
+ * Changes the text in the HTML element with the ID 'recipeText' with a fade-in animation.
+ */
+function changeRezeptdesTagesText() {
+    changeContent('recipeText', () => changeRecipeText());
+}
+
+
+/**
+ * Changes the title in the HTML element with the ID 'recipeTitle' with a fade-in animation.
+ */
+function changeRezeptdesTagesTitle() {
+    changeContent('recipeTitle', () => changeRecipeTitle());
+}
+
+
+
+/**
+ * Animates a progress bar by increasing its width from 0% to 100% in 0.5% increments
+ * @function progressBar
+ */
 function progressBar() {
 	const bar = document.getElementById('progressBar');
 	let width = 1;
@@ -276,19 +301,25 @@ function progressBar() {
 		if (width >= 100) {
 			clearInterval(id);
 		} else {
-			width++;
+			width = width + 0.5;
 			bar.style.width = width + '%';
 		}
-	}, (loopTime / 100));
+	}, (loopTime / 200));
 }
 
 
-setInterval(() => changeContent('recipeText', changeRecipeText), loopTime);
-setInterval(() => changeContent('recipeTitle', changeRecipeTitle), loopTime);
-
-setInterval(progressBar, loopTime);
-setInterval(changeRezeptdesTages, loopTime);
-setInterval(changeRezeptdesTagesLink, loopTime);
-
+/**
+ * Starts interval functions to update content periodically (loopTime in ms).
+ * @function startIntervalFunctions
+ */
+function startIntervalFunctions() {
+    setInterval(() => {
+        changeRezeptdesTagesText();
+        changeRezeptdesTagesTitle();
+        progressBar();
+        changeRezeptdesTages();
+        changeRezeptdesTagesLink();
+    }, loopTime);
+}
 
 

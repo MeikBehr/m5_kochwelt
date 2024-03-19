@@ -1,5 +1,7 @@
 const images = ['./img/schnelles.käsespätzle.png', './img/carbonara.jpeg', './img/shrimps.jpg']
+
 const recipe = ['./recipe_anton.html', './recipe_oliver.html', './recipe_meik.html']
+
 const recipeText = [
 	"Käsespätzle ist ein herzhaftes Gericht aus der deutsch-österreichischen Küche, das Komfort und Geschmack perfekt vereint. Frisch zubereitete Spätzle, eine Art weiche Eiernudeln, werden mit würzigem Bergkäse geschichtet und mit gerösteten Zwiebeln verfeinert. Der Käse schmilzt zwischen den Spätzle und bildet eine köstlich cremige Textur, während die Zwiebeln eine würzige und knusprige Note hinzufügen. Jeder Bissen ist ein Genuss voller Wärme und Geschmack, der den Gaumen verwöhnt. Käsespätzle ist ein traditionelles Gericht, das Gemütlichkeit auf den Teller bringt und die Aromen der Region einfängt.",
 	"Spaghetti Carbonara ist ein klassisches italienisches Gericht, das Einfachheit und Geschmack vereint. Al dente gekochte Spaghetti werden mit einer cremigen Sauce aus Eiern, Parmesankäse, Speck und schwarzem Pfeffer überzogen. Die Wärme der Nudeln hilft, die Sauce zu binden, während der Speck eine salzige Note und der Pfeffer eine leichte Schärfe hinzufügen. Das Ergebnis ist ein harmonisches Zusammenspiel von Texturen und Aromen, das jeden Gaumen erfreut. Spaghetti Carbonara ist ein zeitloser Favorit, der die Essenz der italienischen Küche in jeder köstlichen Gabel widerspiegelt",
@@ -7,3 +9,12 @@ const recipeText = [
 ]
 
 const recipeTitle = [" - Schnelle Käsespätzle", " - Spaghetti Carbonara", " - Panierte Shrimps mit Ranchdip"]
+
+
+const loopTime = 5000;
+
+let imgIndex = 0,
+    recipeIndex = 0,
+    recipeTextIndex = 0,
+    recipeTitleIndex = 0;
+
