@@ -294,31 +294,44 @@ function changeRezeptdesTagesTitle() {
 
 
 
+let progressBarAnimating = false;
 /**
  * This function animates the progress bar width from 0% to 100% within the specified loop time in 0.5% increments.
  * @param {function} callback - Optional callback function to be executed when animation is complete.
  */
 function animateProgressBar(callback) {
+    if (progressBarAnimating) {
+        return; // Do nothing if animation is already in progress
+    }
+    
+    progressBarAnimating = true;
+
     const bar = document.getElementById('progressBar');
     bar.style.display = 'flex';
     let width = 1;
     let id = setInterval(() => {
+        console.log(width);
         if (document.visibilityState !== "visible") {
             bar.style.width = '0px';
             clearInterval(id);
+            progressBarAnimating = false;
             return;
         }
-        if (width = 100) {
+        if (width >= 100) {
+            width = 1;
             clearInterval(id);
+            progressBarAnimating = false;
             if (callback) {
                 callback();
             }
         } else {
-            width = width + 0.5;
+            width += 1;  // Increase width by 1%
             bar.style.width = width + '%';
         }
-    }, (loopTime / 200));
+    }, (loopTime / 100));   // Adjust speed here
 }
+
+
 
 
 /**
@@ -337,7 +350,129 @@ function startIntervalFunctions() {
                 changeRezeptdesTagesLink();
             });
         }, loopTime);
-    }, 1000);
+    }, 100);
 }
 
+// function startIntervalFunctions() {
+//     if (!progressBarAnimating) {
+//         animateProgressBar(() => {
+//             changeRezeptdesTagesText();
+//             changeRezeptdesTagesTitle();
+//             changeRezeptdesTages();
+//             changeRezeptdesTagesLink();
+//             setTimeout(startIntervalFunctions, 100); // Starten Sie das Intervall erneut, nachdem die Animation abgeschlossen wurde
+//         });
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+/* OLD CODE */
+
+
+// let progressBarAnimating = false;
+// // let intervalID;
+
+// function animateProgressBar(callback) {
+//     if (progressBarAnimating) {
+//         return; // Do nothing if animation is already in progress
+//     }
+    
+//     progressBarAnimating = true;
+
+//     const bar = document.getElementById('progressBar');
+//     bar.style.display = 'flex';
+//     let width = 1;
+//     let id = setInterval(() => {
+//         if (document.visibilityState !== "visible") {
+//             clearInterval(id);
+//             progressBarAnimating = false;
+//             return;
+//         }
+//         if (width >= 100) {
+//             width = 1;
+//             clearInterval(id);
+//             progressBarAnimating = false;
+//             if (callback) {
+//                 callback();
+//             }
+//         } else {
+//             width += 1;  // Increase width by 1%
+//             bar.style.width = width + '%';
+//         }
+//     }, (loopTime / 100));   // Adjust speed here
+// }
+
+// function startIntervalFunctions() {
+//     if (!document.hidden && !progressBarAnimating) {
+//         intervalID = setInterval(() => {
+//             animateProgressBar(() => {
+//                 changeRezeptdesTagesText();
+//                 changeRezeptdesTagesTitle();
+//                 changeRezeptdesTages();
+//                 changeRezeptdesTagesLink();
+//             });
+//         }, loopTime);
+//     }
+// }
+
+// document.addEventListener("visibilitychange", () => {
+//     if (document.visibilityState === "visible") {
+//         startIntervalFunctions();
+//     } else {
+//         clearInterval(intervalID);
+//     }
+// });
+
+// window.addEventListener("load", startIntervalFunctions);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Very old code */ 
+
+// function animateProgressBar(callback) {
+//     const bar = document.getElementById('progressBar');
+//     bar.style.display = 'flex';
+//     let width = 1;
+//     let id = setInterval(() => {
+//         console.log(width);
+//         if (document.visibilityState !== "visible") {
+//             console.log("visible");
+//             bar.style.width = '0px';
+//             clearInterval(id);
+//             return;
+//         }
+//         if (width >= 100) {
+//             console.log("clearinterval");
+//             width = 1;
+//             clearInterval(id);
+//             if (callback) {
+//                 callback();
+//             }
+//         } else {
+//             width = width + 1;  // 0.5
+//             bar.style.width = width + '%';
+//         }
+//     }, (loopTime / 100));   // 200
+// }
 
