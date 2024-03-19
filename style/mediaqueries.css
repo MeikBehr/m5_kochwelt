@@ -266,6 +266,16 @@
         font-size: 2rem;
     }
 
+    .contact__submit-container__checkbox {
+        align-items: flex-start;
+    }
+
+    .contact__submit-container__checkbox label {
+        display: inline-block;
+        text-align: left;
+        word-wrap: break-word;
+    }
+
 }
 
 
