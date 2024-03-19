@@ -303,6 +303,11 @@ function animateProgressBar(callback) {
     bar.style.display = 'flex';
     let width = 1;
     let id = setInterval(() => {
+        if (document.visibilityState != "visible") {
+            bar.style.width = '0px';
+            clearInterval(id);
+            return;
+        }
         if (width >= 100) {
             clearInterval(id);
             if (callback) {
