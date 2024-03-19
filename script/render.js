@@ -15,6 +15,7 @@ function headHTML() {
 		<link rel="stylesheet" type="text/css" href="./style/recipe.css">
 		<link rel="stylesheet" type="text/css" href="./style/mediaqueries.css">
         <script defer src="./script/render.js" type="text/javascript"></script>
+		<script defer src="./script/data.js" type="text/javascript"></script>
         <script defer src="./script/script.js" type="text/javascript"></script>
     <title>Kochwelt - Gruppe 107</title>	
     `;

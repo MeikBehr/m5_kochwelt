@@ -16,6 +16,7 @@
 		<link rel="stylesheet" type="text/css" href="./style/mediaqueries.css">
 
         <script defer src="./script/render.js" type="text/javascript"></script>
+		<script defer src="./script/data.js" type="text/javascript"></script>
         <script defer src="./script/script.js" type="text/javascript"></script>
 
         <title>Kochwelt - Gruppe 107</title>
@@ -33,19 +34,24 @@
 				<section>
 					<div class="main__dish-container">
 						<div>
-							<a href="./recipe.html">
+							<a id="linkChange" href="./recipe.html">
 								<div class="main__dish__image-container">
-									<img id="recipeOfTheDay" class="main__dish__image" src="./img/croissant.jpg">
+									<img id="imgChange" class="main__dish__image" src="./img/schnelles.käsespätzle.png">
 								</div>
 							</a>
 							<div id="progressBar"></div>
 						</div>
 						<div class="main__dish__recipe-of-the-day">
 							<div>
-								<h1>Rezept des Tages</h1>
-								<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias veritatis, consequatur necessitatibus ipsam iusto assumenda aliquam facere dignissimos suscipit quia quis ea, tempore ad, quos magni quod natus aut animi?</p>
+								<h1>
+									Rezept des Tages
+									<span id="recipeTitle" style="opacity: 1;"> - Schnelle Käsespätzle</span>
+								</h1>
+								<p id="recipeText" style="opacity: 1;">
+									Käsespätzle ist ein herzhaftes Gericht aus der deutsch-österreichischen Küche, das Komfort und Geschmack perfekt vereint. Frisch zubereitete Spätzle, eine Art weiche Eiernudeln, werden mit würzigem Bergkäse geschichtet und mit gerösteten Zwiebeln verfeinert. Der Käse schmilzt zwischen den Spätzle und bildet eine köstlich cremige Textur, während die Zwiebeln eine würzige und knusprige Note hinzufügen. Jeder Bissen ist ein Genuss voller Wärme und Geschmack, der den Gaumen verwöhnt. Käsespätzle ist ein traditionelles Gericht, das Gemütlichkeit auf den Teller bringt und die Aromen der Region einfängt.
+								</p>
 							</div>
-							<a href="./recipe.html">
+							<a id="linkChange2" href="./recipe.html">
 								<div  class="main__dish-btn">
 									Rezept öffnen
 								</div>

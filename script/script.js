@@ -8,7 +8,7 @@ function init (main) {
 	renderHeader();
 	renderFooter();
 	// main ? progressBar() : '';
-	main ? startSlideshow() : '';
+	// main ? startSlideshow() : '';
 	setEventListener();
 }
 
@@ -180,7 +180,131 @@ function setEventListenerRecipe() {
 }
 
 
-/* ========= testing Progressbar ========= */
+
+
+
+/* ========= Slideshow Recipe: Image & Text ========= */
+
+
+let imgIndex = 0;
+let recipeIndex = 0;
+let recipeTextIndex = 0;
+let recipeTitleIndex = 0;
+
+
+/* sucht sich aus der arry das bild raus */
+function changeImage() {
+	const currentImg = images[imgIndex]
+	imgIndex = (imgIndex + 1) % images.length;
+    return currentImg;
+}
+
+
+/* sucht sich aus der arry die html-seite raus */
+function changeRecipe() {
+	const currentRecipie = recipe[recipeIndex]
+	recipeIndex = (recipeIndex + 1) % recipe.length;
+	return currentRecipie;
+}
+
+/* sucht sich aus der arry den text raus */
+function changeRecipeText() {
+	const currentRecipieText = recipeText[recipeTextIndex]
+	recipeTextIndex = (recipeTextIndex + 1) % recipeText.length;
+	return currentRecipieText;
+}
+
+/* sucht sich aus der arry den titel raus */
+function changeRecipeTitle() {
+	const currentRecipieTitle = recipeTitle[recipeTitleIndex]
+	recipeTitleIndex = (recipeTitleIndex + 1) % recipeTitle.length;
+	return currentRecipieTitle;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////
+
+
+
+/* rendert das bild jede 5sek */
+function changeRezeptdesTages(){
+	const container = document.getElementById('imgChange');
+	container.src = changeImage();
+} 
+
+
+/* rendert den link jede 5sek */
+function changeRezeptdesTagesLink(){
+	const container = document.getElementById('linkChange');
+	const container2 = document.getElementById('linkChange2');
+	const recipeHref = changeRecipe();
+	container.href = recipeHref;
+	container2.href = recipeHref;
+} 
+
+
+/* rendert den text jede 5sek */
+function changeRezeptdesTagesText(){
+	const container = document.getElementById('recipeText');
+	container.style.opacity = 0;
+	setTimeout(function() {
+	container.innerText = changeRecipeText();
+	container.style.opacity = 1;
+ }, 500);
+} 
+
+
+/* rendert den titel jede 5sek */
+function changeRezeptdesTagesTitle(){
+	const container = document.getElementById('recipeTitle');
+	container.style.opacity = 0;
+	setTimeout(function() {
+	container.innerText = changeRecipeTitle();
+	container.style.opacity = 1;
+ }, 500);
+} 
+
+
+function progressBar() {
+	const bar = document.getElementById('progressBar');
+	let width = 1;
+	let id = setInterval(() => {
+		if (width >= 100) {
+			clearInterval(id);
+		} else {
+			width++;
+			bar.style.width = width + '%';
+		}
+	}, 50);
+}
+
+setInterval(changeRezeptdesTages, 5000);
+setInterval(changeRezeptdesTagesLink, 5000);
+setInterval(changeRezeptdesTagesText, 5000);
+setInterval(changeRezeptdesTagesTitle, 5000);
+setInterval(progressBar, 5000);
+
+
+
+
+
+
+
+
+
+
+/*    O L D   C O D E
 
 
 function progressBar() {
@@ -224,7 +348,7 @@ function startSlideshow () {
 	}, 5000);
 }
 
-
+ */
 
 
 
