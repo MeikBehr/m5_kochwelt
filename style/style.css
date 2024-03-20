@@ -25,6 +25,7 @@ https://codepen.io/stephenpaton-tech/full/JjRvGmY
 
 *::-webkit-scrollbar-track {
     background: #c0c0c0;
+    background: transparent!important;
     border-radius: 7px;
 }
   
@@ -34,8 +35,7 @@ https://codepen.io/stephenpaton-tech/full/JjRvGmY
     border-radius: 7px;
     border: 3px solid #ffffff;
 }
-
-  
+ 
 
 :root {
     --green: #008000;
@@ -53,6 +53,7 @@ https://codepen.io/stephenpaton-tech/full/JjRvGmY
     --fontSizeHeadlin: 1.5rem;
     --fontSizeHeader: 1.125rem;
     --marginLRContent: 4rem;
+    --marginTBContent: 4rem;
     --sizeMobileImage: 15rem;
     --headerHeight: 7rem;
     --footerHeight: 10rem;

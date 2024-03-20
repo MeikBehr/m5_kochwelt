@@ -330,3 +330,103 @@
 #recipeTitle{
     transition: opacity 0.35s ease-in-out;
 }
+
+
+
+/* ========== U E B E R   U N S  ========== */
+
+
+.ueber-uns h1 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3.125rem;
+}
+
+
+.ueber-uns h2 {
+    padding-bottom: 3.125rem;
+}
+
+
+.ueber-uns span {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+
+.member__section {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.team__member {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.team__member__img__meik,
+.team__member__img__oliver,
+.team__member__img__anton {
+    background-size: cover;
+    height: 8rem;
+    width: 8rem;
+    border-radius: 10000px;
+}
+
+
+.team__member__name{
+    padding-top: 1rem;
+}
+
+
+.team__member__img__oliver{
+    background-image: url(../img/autor_oliver.jpg);
+}
+
+
+.team__member__img__anton{
+    background-image: url(../img/profile-img-anton-64px-64px.png);
+}
+
+
+.team__member__img__meik{
+    background-image: url(../img/author_meik.jpg);
+}
+
+
+.team__section__parting-line{
+    opacity: 30%;
+}
+
+
+.team__content__section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.location__header{
+    display: flex;
+    justify-content: center;
+}
+
+
+.location__frame{
+    width: 100%;
+}
+
+
+.contentWidth {
+    margin-left: var(--marginLRContent);
+    margin-right: var(--marginLRContent);
+}
+
+.contentHeight {
+    padding-top: var(--marginTBContent);
+    padding-bottom: var(--marginTBContent);
+}

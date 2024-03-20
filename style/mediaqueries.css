@@ -144,6 +144,26 @@
         align-items: center;
     }
 
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+    .main__dish-container {
+        padding: 2.5rem var(--marginLRContent) 2.5rem var(--marginLRContent);
+    }
+
+    .choose-recipe__container {
+        padding: 2.5rem var(--marginLRContent) 2.5rem var(--marginLRContent);
+    }
+
+    .main__info-container {
+        padding: 2.5rem var(--marginLRContent) 3.5rem var(--marginLRContent);
+    }
+
+    .main__info-headline {
+        padding-bottom: 1.5rem;
+    }
+
 }
 
 

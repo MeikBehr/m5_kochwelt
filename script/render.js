@@ -79,7 +79,7 @@ function footerHTML() {
 			<p>|</p>
 			<a href="./datenschutz.html">Datenschutz</a>
 			<p>|</p>
-			<a href="#">Über uns</a>
+			<a href="./ueber_uns.html">Über uns</a>
 		</section>
 		<section class="footer__nav_socialMedia">
 			<a href="https://www.facebook.com/?lang=de">
