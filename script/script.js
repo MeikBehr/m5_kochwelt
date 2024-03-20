@@ -292,12 +292,14 @@ function changeRezeptdesTagesTitle() {
 }
 
 
-
 /**
  * This function animates the progress bar width from 0% to 100% within the specified loop time in 0.5% increments.
  * @param {function} callback - Optional callback function to be executed when animation is complete.
  */
+
 function animateProgressBar(callback) {
+    if (isAnimating) return;
+    isAnimating = true;
     const bar = document.getElementById('progressBar');
     bar.style.display = 'flex';
     console.log('animateProgressBar');
@@ -305,6 +307,7 @@ function animateProgressBar(callback) {
     let id = setInterval(() => {
         if (width >= 100) {
             clearInterval(id);
+            isAnimating = false;
             if (callback) {
                 callback();
             }
@@ -322,33 +325,29 @@ function animateProgressBar(callback) {
  * Start the interval functions after a delay of 1 second.
  * This delay allows the page to stabilize before starting the animations.
  */
-
-let progressBarAnimating = false;
-
 function startIntervalFunctions() {
     setTimeout(() => {
         intervalID = setInterval(() => {
-            if (!progressBarAnimating) {
-                progressBarAnimating = true; // Markieren Sie die Animation als im Gange
-                animateProgressBar(() => {
-                    // Callback-Funktion, die ausgeführt wird, wenn die Animation abgeschlossen ist
-                    changeRezeptdesTagesText();
-                    changeRezeptdesTagesTitle();
-                    changeRezeptdesTages();
-                    changeRezeptdesTagesLink();
-                    progressBarAnimating = false; // Animation ist abgeschlossen
-                });
-            }
+            animateProgressBar(() => {
+                changeRezeptdesTagesText();
+                changeRezeptdesTagesTitle();
+                changeRezeptdesTages();
+                changeRezeptdesTagesLink();
+            });
         }, loopTime);
     }, 1000);
 }
 
 
-/*  OLD CODE
 
+
+/* =========================    OLD CODE    =================================================================
 animateProgressBar() wird mehrfach gestartet, wenn man das Fenster verlässt und
 wieder zurück kommt. Daher obige neue Version.
 Diese erzeugt leider in FireFox eine unerwünschte Pause!
+
+Diese Probleme mit Firefox sind bekannt, hier ein Verweis:
+https://www.onsip.com/voip-resources/voip-fundamentals/avoiding-javascript-settimeout-and-setinterval-problems
 
 // function startIntervalFunctions() {
 //     setTimeout(() => {
@@ -362,5 +361,47 @@ Diese erzeugt leider in FireFox eine unerwünschte Pause!
 //         }, loopTime);
 //     }, 1000);
 // }
+
+
+// function animateProgressBar(callback) {
+//     const bar = document.getElementById('progressBar');
+//     bar.style.display = 'flex';
+//     console.log('animateProgressBar');
+//     let width = 1;
+//     let id = setInterval(() => {
+//         if (width >= 100) {
+//             clearInterval(id);
+//             if (callback) {
+//                 callback();
+//             }
+//         } else {
+//             width = width + 0.5;
+//             bar.style.width = width + '%';
+//         }
+//     }, (loopTime / 200));
+// }
+
+
+
+// let progressBarAnimating = false;
+
+// function startIntervalFunctions() {
+//     setTimeout(() => {
+//         intervalID = setInterval(() => {
+//             if (!progressBarAnimating) {
+//                 progressBarAnimating = true; // Markieren Sie die Animation als im Gange
+//                 animateProgressBar(() => {
+//                     // Callback-Funktion, die ausgeführt wird, wenn die Animation abgeschlossen ist
+//                     changeRezeptdesTagesText();
+//                     changeRezeptdesTagesTitle();
+//                     changeRezeptdesTages();
+//                     changeRezeptdesTagesLink();
+//                     progressBarAnimating = false; // Animation ist abgeschlossen
+//                 });
+//             }
+//         }, loopTime);
+//     }, 1000);
+// }
+
 
 */

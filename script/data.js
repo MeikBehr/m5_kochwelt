@@ -31,6 +31,7 @@ const recipes = [
 
 ]
 
+let isAnimating = false;
 
 const loopTime = 5000;
 
