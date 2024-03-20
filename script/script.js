@@ -270,9 +270,11 @@ function changeRezeptdesTages() {
 function changeRezeptdesTagesLink() {
     const container = document.getElementById('linkChange');
     const container2 = document.getElementById('linkChange2');
+    const container3 = document.getElementById('linkChange3');
     const recipeHref = changeRecipe();
     container.href = recipeHref;
     container2.href = recipeHref;
+    container3.href = recipeHref;
 }
 
 
@@ -319,9 +321,6 @@ function animateProgressBar(callback) {
         }
     }, (loopTime / 200));
 }
-
-
-
 
 
 /**

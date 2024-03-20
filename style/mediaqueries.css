@@ -124,11 +124,6 @@
         display: none;
     }
 
-    /* .main__info-container__img {
-        height: 12rem;
-        width: 12rem;
-    } */
-
     .footer__nav {
         width: 100%;
         margin-left: 0;
@@ -139,12 +134,17 @@
         margin-left: var(--marginLRContent);
     }
 
-    /* .footer__nav_socialMedia {
-        margin-right: var(--marginLRContent);
-    } */
+    .main__dish-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main__dish__recipe-of-the-day {
+        align-items: center;
+    }
 
 }
-
 
 
 @media (max-width: 650px) {
