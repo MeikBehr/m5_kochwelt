@@ -181,6 +181,15 @@ function setEventListenerRecipe() {
 }
 
 
+
+
+
+
+
+
+
+
+
 /* ============== Slideshow Recipe: Image & Text ============== */
 
 
@@ -202,6 +211,7 @@ function getNextIndex(currentIndex, array) {
 function changeImage() {
     const currentImg = images[imgIndex];
     imgIndex = getNextIndex(imgIndex, images);
+    console.log("changeImage() called");
     return currentImg;
 }
 
@@ -213,6 +223,7 @@ function changeImage() {
 function changeRecipe() {
     const currentRecipe = recipe[recipeIndex];
     recipeIndex = getNextIndex(recipeIndex, recipe);
+    console.log("changeRecipe() called");
     return currentRecipe;
 }
 
@@ -224,6 +235,7 @@ function changeRecipe() {
 function changeRecipeText() {
     const currentRecipeText = recipeText[recipeTextIndex];
     recipeTextIndex = getNextIndex(recipeTextIndex, recipeText);
+    console.log("changeRecipeText() called");
     return currentRecipeText;
 }
 
@@ -235,6 +247,7 @@ function changeRecipeText() {
 function changeRecipeTitle() {
     const currentRecipeTitle = recipeTitle[recipeTitleIndex];
     recipeTitleIndex = getNextIndex(recipeTitleIndex, recipeTitle);
+    console.log("changeRecipeTitle() called");
     return currentRecipeTitle;
 }
 
@@ -247,9 +260,11 @@ function changeRecipeTitle() {
 function changeContent(containerId, changeFunction) {
     const container = document.getElementById(containerId);
     container.style.opacity = 0;
+    console.log("changeContent() called");
     setTimeout(() => {
         container.innerText = changeFunction();
         container.style.opacity = 1;
+        console.log("changeContent() setTimeout");
     }, 500);
 }
 
@@ -260,6 +275,7 @@ function changeContent(containerId, changeFunction) {
 function changeRezeptdesTages() {
     const container = document.getElementById('imgChange');
     container.src = changeImage();
+    console.log("changeRezeptdesTages() called");
 }
 
 
@@ -274,6 +290,7 @@ function changeRezeptdesTagesLink() {
     container.href = recipeHref;
     container2.href = recipeHref;
     container3.href = recipeHref;
+    console.log("changeRezeptdesTagesLink() called");
 }
 
 
@@ -282,6 +299,7 @@ function changeRezeptdesTagesLink() {
  */
 function changeRezeptdesTagesText() {
     changeContent('recipeText', () => changeRecipeText());
+    console.log("changeRezeptdesTagesText() called");
 }
 
 
@@ -290,6 +308,7 @@ function changeRezeptdesTagesText() {
  */
 function changeRezeptdesTagesTitle() {
     changeContent('recipeTitle', () => changeRecipeTitle());
+    console.log("changeRezeptdesTagesTitle() called");
 }
 
 
@@ -299,27 +318,68 @@ let progressBarAnimating = false;
  * This function animates the progress bar width from 0% to 100% within the specified loop time in 0.5% increments.
  * @param {function} callback - Optional callback function to be executed when animation is complete.
  */
+// function animateProgressBar(callback) {
+
+//     console.log("animateProgressBar() called");
+
+//     if (progressBarAnimating) {
+//         console.log("animateProgressBar() : progressBarAnimating is true, so return");
+//         return; // Do nothing if animation is already in progress
+//     }
+    
+//     progressBarAnimating = true;
+//     console.log("animateProgressBar() : progressBarAnimating set to true");
+
+//     const bar = document.getElementById('progressBar');
+//     bar.style.display = 'flex';
+//     let width = 1;
+
+//     let id = setInterval(() => {
+//         console.log(width);
+//         if (document.visibilityState !== "visible") {
+//             bar.style.width = '0px';
+//             progressBarAnimating = false;
+//             clearInterval(id);
+//             return;
+//         }
+//         if (width >= 100) {
+//             console.log("animateProgressBar() : width >= 100");
+//             width = 1;
+//             progressBarAnimating = false;
+//             clearInterval(id);
+//             if (callback) {
+//                 console.log("animateProgressBar() : callback");
+//                 callback();
+//             }
+//         } else {
+//             width += 1;  // Increase width by 1%
+//             bar.style.width = width + '%';
+//         }
+//     }, (loopTime / 100));   // Adjust speed here
+// }
+
+
+
+
 function animateProgressBar(callback) {
     if (progressBarAnimating) {
         return; // Do nothing if animation is already in progress
     }
-    
+
     progressBarAnimating = true;
 
     const bar = document.getElementById('progressBar');
     bar.style.display = 'flex';
     let width = 1;
-    let id = setInterval(() => {
-        console.log(width);
+
+    function animate() {
         if (document.visibilityState !== "visible") {
             bar.style.width = '0px';
-            clearInterval(id);
             progressBarAnimating = false;
             return;
         }
         if (width >= 100) {
             width = 1;
-            clearInterval(id);
             progressBarAnimating = false;
             if (callback) {
                 callback();
@@ -327,9 +387,18 @@ function animateProgressBar(callback) {
         } else {
             width += 1;  // Increase width by 1%
             bar.style.width = width + '%';
+            requestAnimationFrame(animate); // Request next animation frame
         }
-    }, (loopTime / 100));   // Adjust speed here
+    }
+
+    // Start the animation
+    requestAnimationFrame(animate);
 }
+
+
+
+
+
 
 
 
@@ -352,18 +421,6 @@ function startIntervalFunctions() {
         }, loopTime);
     }, 100);
 }
-
-// function startIntervalFunctions() {
-//     if (!progressBarAnimating) {
-//         animateProgressBar(() => {
-//             changeRezeptdesTagesText();
-//             changeRezeptdesTagesTitle();
-//             changeRezeptdesTages();
-//             changeRezeptdesTagesLink();
-//             setTimeout(startIntervalFunctions, 100); // Starten Sie das Intervall erneut, nachdem die Animation abgeschlossen wurde
-//         });
-//     }
-// }
 
 
 
