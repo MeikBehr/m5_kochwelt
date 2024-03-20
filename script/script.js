@@ -303,21 +303,43 @@ function animateProgressBar(callback) {
     const bar = document.getElementById('progressBar');
     const isFF = isFirefox();
     let width = 1;
-    let id = setInterval(() => {
+    const id = setInterval(() => {
         if (width >= 100) {
             clearInterval(id);
             isAnimating = false;
-            if (callback) {
-                callback();
-            }
+            callback && callback();
         } else {
-            width = width + 0.5;
-            bar.style.width = width + '%';
-            if (!isFF) {
-                bar.style.display = 'flex';
-            }
+            bar.style.width = `${width}%`;
+            !isFF && (bar.style.display = 'flex');
+            width += 0.5;
         }
-    }, (loopTime / 200));
+    }, loopTime / 200);
+}
+
+
+/**
+ * Finish the progress bar animation and execute the callback function if provided.
+ * @param {function} callback - Optional callback function to be executed after finishing the animation.
+ */
+function finishAnimation(callback) {
+    isAnimating = false;
+    if (callback) {
+        callback();
+    }
+}
+
+
+/**
+ * Update the progress bar width and display style based on the given parameters.
+ * @param {HTMLElement} bar - The progress bar element.
+ * @param {number} width - The width of the progress bar in percentage.
+ * @param {boolean} isFF - A boolean indicating whether the browser is Firefox.
+ */
+function updateProgressBar(bar, width, isFF) {
+    bar.style.width = width + '%';
+    if (!isFF) {
+        bar.style.display = 'flex';
+    }
 }
 
 
@@ -342,13 +364,19 @@ function startIntervalFunctions() {
 }
 
 
-/* Bugfix for Firefox */
-
+/**
+ * Bugfix for Firefox - Checks if the current browser is Firefox.
+ * @returns {boolean} - True if the browser is Firefox, otherwise false.
+ */
 function isFirefox() {
     const userAgent = navigator.userAgent.toLowerCase();
     return userAgent.indexOf('firefox') > -1;
 }
 
+
+/**
+ * Bugfix for Firefox - Adjusts the application behavior for the current browser. 
+ */
 function adjustForBrowser() {
     if (isFirefox()) {
         const bar = document.getElementById('progressBar');
