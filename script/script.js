@@ -296,12 +296,11 @@ function changeRezeptdesTagesTitle() {
  * This function animates the progress bar width from 0% to 100% within the specified loop time in 0.5% increments.
  * @param {function} callback - Optional callback function to be executed when animation is complete.
  */
-
 function animateProgressBar(callback) {
     if (isAnimating) return;
     isAnimating = true;
     const bar = document.getElementById('progressBar');
-    bar.style.display = 'flex';
+    const isFF = isFirefox();
     console.log('animateProgressBar');
     let width = 1;
     let id = setInterval(() => {
@@ -314,9 +313,15 @@ function animateProgressBar(callback) {
         } else {
             width = width + 0.5;
             bar.style.width = width + '%';
+            if (!isFF) {
+                bar.style.display = 'flex';
+            }
         }
     }, (loopTime / 200));
 }
+
+
+
 
 
 /**
@@ -326,6 +331,7 @@ function animateProgressBar(callback) {
  * This delay allows the page to stabilize before starting the animations.
  */
 function startIntervalFunctions() {
+    adjustForBrowser();
     setTimeout(() => {
         intervalID = setInterval(() => {
             animateProgressBar(() => {
@@ -337,6 +343,25 @@ function startIntervalFunctions() {
         }, loopTime);
     }, 1000);
 }
+
+
+/* Bugfix for Firefox */
+
+function isFirefox() {
+    const userAgent = navigator.userAgent.toLowerCase();
+    return userAgent.indexOf('firefox') > -1;
+}
+
+function adjustForBrowser() {
+    if (isFirefox()) {
+        const bar = document.getElementById('progressBar');
+        bar.style.display = 'none';
+        loopTime = 3000;
+    }
+}
+
+
+
 
 
 

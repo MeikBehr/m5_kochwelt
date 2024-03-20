@@ -33,7 +33,7 @@ const recipes = [
 
 let isAnimating = false;
 
-const loopTime = 5000;
+let loopTime = 5000;
 
 let imgIndex = 1,
     recipeIndex = 1,
