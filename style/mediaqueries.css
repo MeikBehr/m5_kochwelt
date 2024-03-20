@@ -144,10 +144,6 @@
         align-items: center;
     }
 
-
-/* +++++++++++++++++++++++++++++++++++++++++++++++++ */
-
-
     .main__dish-container {
         padding: 2.5rem var(--marginLRContent) 2.5rem var(--marginLRContent);
     }
@@ -296,6 +292,27 @@
         word-wrap: break-word;
     }
 
+    .member__section {
+        flex-direction: column;
+    }
+
+    .team__member {
+        padding-top: 1.5rem;
+    }
+
+    .team__member__name {
+        padding-top: 0.5rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .team__member__img__meik,
+    .team__member__img__oliver,
+    .team__member__img__anton {
+        height: 12rem;
+        width: 12rem;
+    }
+
 }
 
 
@@ -303,6 +320,7 @@
 
     * {
         --marginLRContent: 1rem;
+        --marginTBContent: 2rem;
     }
 
     .main__dish__recipe-of-the-day h1 {
@@ -346,15 +364,26 @@
         display: none;
     }
 
+    .team__content__section h2 {
+        padding-bottom: 1rem;
+        font-size: 1.35rem;
+    } 
+
+    .ueber-uns span {
+        padding-left: var(--marginLRContent);
+        padding-right: var(--marginLRContent);
+    }
+
+    .ueber-uns h1 {
+        padding-bottom: 1rem;
+    }
+
 }
 
 @media (max-width: 380px) {
 
-    /* .footer__nav {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-    } */
+    .ueber-uns h2 {
+        padding-bottom: 2rem;
+    }
 
 }

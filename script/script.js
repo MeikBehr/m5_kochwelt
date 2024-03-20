@@ -248,7 +248,6 @@ function changeContent(containerId, changeFunction) {
     const container = document.getElementById(containerId);
     container.style.opacity = 0;
     setTimeout(() => {
-        console.log('changeContent -> timeout');
         container.innerText = changeFunction();
         container.style.opacity = 1;
     }, 500);
@@ -303,7 +302,6 @@ function animateProgressBar(callback) {
     isAnimating = true;
     const bar = document.getElementById('progressBar');
     const isFF = isFirefox();
-    console.log('animateProgressBar');
     let width = 1;
     let id = setInterval(() => {
         if (width >= 100) {
@@ -359,73 +357,3 @@ function adjustForBrowser() {
     }
 }
 
-
-
-
-
-
-
-/* =========================    OLD CODE    =================================================================
-animateProgressBar() wird mehrfach gestartet, wenn man das Fenster verlässt und
-wieder zurück kommt. Daher obige neue Version.
-Diese erzeugt leider in FireFox eine unerwünschte Pause!
-
-Diese Probleme mit Firefox sind bekannt, hier ein Verweis:
-https://www.onsip.com/voip-resources/voip-fundamentals/avoiding-javascript-settimeout-and-setinterval-problems
-
-// function startIntervalFunctions() {
-//     setTimeout(() => {
-//         intervalID = setInterval(() => {
-//             animateProgressBar(() => {
-//                 changeRezeptdesTagesText();
-//                 changeRezeptdesTagesTitle();
-//                 changeRezeptdesTages();
-//                 changeRezeptdesTagesLink();
-//             });
-//         }, loopTime);
-//     }, 1000);
-// }
-
-
-// function animateProgressBar(callback) {
-//     const bar = document.getElementById('progressBar');
-//     bar.style.display = 'flex';
-//     console.log('animateProgressBar');
-//     let width = 1;
-//     let id = setInterval(() => {
-//         if (width >= 100) {
-//             clearInterval(id);
-//             if (callback) {
-//                 callback();
-//             }
-//         } else {
-//             width = width + 0.5;
-//             bar.style.width = width + '%';
-//         }
-//     }, (loopTime / 200));
-// }
-
-
-
-// let progressBarAnimating = false;
-
-// function startIntervalFunctions() {
-//     setTimeout(() => {
-//         intervalID = setInterval(() => {
-//             if (!progressBarAnimating) {
-//                 progressBarAnimating = true; // Markieren Sie die Animation als im Gange
-//                 animateProgressBar(() => {
-//                     // Callback-Funktion, die ausgeführt wird, wenn die Animation abgeschlossen ist
-//                     changeRezeptdesTagesText();
-//                     changeRezeptdesTagesTitle();
-//                     changeRezeptdesTages();
-//                     changeRezeptdesTagesLink();
-//                     progressBarAnimating = false; // Animation ist abgeschlossen
-//                 });
-//             }
-//         }, loopTime);
-//     }, 1000);
-// }
-
-
-*/
