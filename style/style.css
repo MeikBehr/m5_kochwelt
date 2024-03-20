@@ -171,8 +171,6 @@ button {
 }
 
 
-
-
 /*  =======================  H E A D E R  ======================= */
 
 
@@ -242,7 +240,6 @@ button {
 }
 
 
-
 .header__nav a:hover,
 #linkToContactForm:hover {
     transition: color 150ms ease-in-out, border-bottom 150ms ease-in-out;
@@ -251,10 +248,7 @@ button {
 }
 
 
-
 /* =========   Mobil Nav ===========*/
-
-
 
 
 .mobile-nav-show {
@@ -289,7 +283,6 @@ button {
     list-style-type: none;
     padding: 0.5rem;
     position: absolute;
-    /* top: 0; */   /* top: 0 würde das Menü den Burgers verdeckt */
     top: 100%;
     right: 0;
     border: 1px solid #ccc;
