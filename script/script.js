@@ -181,15 +181,6 @@ function setEventListenerRecipe() {
 }
 
 
-
-
-
-
-
-
-
-
-
 /* ============== Slideshow Recipe: Image & Text ============== */
 
 
@@ -211,7 +202,6 @@ function getNextIndex(currentIndex, array) {
 function changeImage() {
     const currentImg = images[imgIndex];
     imgIndex = getNextIndex(imgIndex, images);
-    console.log("changeImage() called");
     return currentImg;
 }
 
@@ -223,7 +213,6 @@ function changeImage() {
 function changeRecipe() {
     const currentRecipe = recipe[recipeIndex];
     recipeIndex = getNextIndex(recipeIndex, recipe);
-    console.log("changeRecipe() called");
     return currentRecipe;
 }
 
@@ -235,7 +224,6 @@ function changeRecipe() {
 function changeRecipeText() {
     const currentRecipeText = recipeText[recipeTextIndex];
     recipeTextIndex = getNextIndex(recipeTextIndex, recipeText);
-    console.log("changeRecipeText() called");
     return currentRecipeText;
 }
 
@@ -247,7 +235,6 @@ function changeRecipeText() {
 function changeRecipeTitle() {
     const currentRecipeTitle = recipeTitle[recipeTitleIndex];
     recipeTitleIndex = getNextIndex(recipeTitleIndex, recipeTitle);
-    console.log("changeRecipeTitle() called");
     return currentRecipeTitle;
 }
 
@@ -260,11 +247,10 @@ function changeRecipeTitle() {
 function changeContent(containerId, changeFunction) {
     const container = document.getElementById(containerId);
     container.style.opacity = 0;
-    console.log("changeContent() called");
     setTimeout(() => {
+        console.log('changeContent -> timeout');
         container.innerText = changeFunction();
         container.style.opacity = 1;
-        console.log("changeContent() setTimeout");
     }, 500);
 }
 
@@ -275,22 +261,18 @@ function changeContent(containerId, changeFunction) {
 function changeRezeptdesTages() {
     const container = document.getElementById('imgChange');
     container.src = changeImage();
-    console.log("changeRezeptdesTages() called");
 }
 
 
 /**
- * This function changes the links in the HTML elements with the IDs 'linkChange' and 'linkChange2' and 'linkChange3'.
+ * This function changes the links in the HTML elements with the IDs 'linkChange' and 'linkChange2'.
  */
 function changeRezeptdesTagesLink() {
     const container = document.getElementById('linkChange');
     const container2 = document.getElementById('linkChange2');
-    const container3 = document.getElementById('linkChange3');
     const recipeHref = changeRecipe();
     container.href = recipeHref;
     container2.href = recipeHref;
-    container3.href = recipeHref;
-    console.log("changeRezeptdesTagesLink() called");
 }
 
 
@@ -299,7 +281,6 @@ function changeRezeptdesTagesLink() {
  */
 function changeRezeptdesTagesText() {
     changeContent('recipeText', () => changeRecipeText());
-    console.log("changeRezeptdesTagesText() called");
 }
 
 
@@ -308,99 +289,31 @@ function changeRezeptdesTagesText() {
  */
 function changeRezeptdesTagesTitle() {
     changeContent('recipeTitle', () => changeRecipeTitle());
-    console.log("changeRezeptdesTagesTitle() called");
 }
 
 
 
-let progressBarAnimating = false;
 /**
  * This function animates the progress bar width from 0% to 100% within the specified loop time in 0.5% increments.
  * @param {function} callback - Optional callback function to be executed when animation is complete.
  */
-// function animateProgressBar(callback) {
-
-//     console.log("animateProgressBar() called");
-
-//     if (progressBarAnimating) {
-//         console.log("animateProgressBar() : progressBarAnimating is true, so return");
-//         return; // Do nothing if animation is already in progress
-//     }
-    
-//     progressBarAnimating = true;
-//     console.log("animateProgressBar() : progressBarAnimating set to true");
-
-//     const bar = document.getElementById('progressBar');
-//     bar.style.display = 'flex';
-//     let width = 1;
-
-//     let id = setInterval(() => {
-//         console.log(width);
-//         if (document.visibilityState !== "visible") {
-//             bar.style.width = '0px';
-//             progressBarAnimating = false;
-//             clearInterval(id);
-//             return;
-//         }
-//         if (width >= 100) {
-//             console.log("animateProgressBar() : width >= 100");
-//             width = 1;
-//             progressBarAnimating = false;
-//             clearInterval(id);
-//             if (callback) {
-//                 console.log("animateProgressBar() : callback");
-//                 callback();
-//             }
-//         } else {
-//             width += 1;  // Increase width by 1%
-//             bar.style.width = width + '%';
-//         }
-//     }, (loopTime / 100));   // Adjust speed here
-// }
-
-
-
-
 function animateProgressBar(callback) {
-    if (progressBarAnimating) {
-        return; // Do nothing if animation is already in progress
-    }
-
-    progressBarAnimating = true;
-
     const bar = document.getElementById('progressBar');
     bar.style.display = 'flex';
+    console.log('animateProgressBar');
     let width = 1;
-
-    function animate() {
-        if (document.visibilityState !== "visible") {
-            bar.style.width = '0px';
-            progressBarAnimating = false;
-            return;
-        }
+    let id = setInterval(() => {
         if (width >= 100) {
-            width = 1;
-            progressBarAnimating = false;
+            clearInterval(id);
             if (callback) {
                 callback();
             }
         } else {
-            width += 1;  // Increase width by 1%
+            width = width + 0.5;
             bar.style.width = width + '%';
-            requestAnimationFrame(animate); // Request next animation frame
         }
-    }
-
-    // Start the animation
-    requestAnimationFrame(animate);
+    }, (loopTime / 200));
 }
-
-
-
-
-
-
-
 
 
 /**
@@ -409,66 +322,36 @@ function animateProgressBar(callback) {
  * Start the interval functions after a delay of 1 second.
  * This delay allows the page to stabilize before starting the animations.
  */
+
+let progressBarAnimating = false;
+
 function startIntervalFunctions() {
     setTimeout(() => {
         intervalID = setInterval(() => {
-            animateProgressBar(() => {
-                changeRezeptdesTagesText();
-                changeRezeptdesTagesTitle();
-                changeRezeptdesTages();
-                changeRezeptdesTagesLink();
-            });
+            if (!progressBarAnimating) {
+                progressBarAnimating = true; // Markieren Sie die Animation als im Gange
+                animateProgressBar(() => {
+                    // Callback-Funktion, die ausgeführt wird, wenn die Animation abgeschlossen ist
+                    changeRezeptdesTagesText();
+                    changeRezeptdesTagesTitle();
+                    changeRezeptdesTages();
+                    changeRezeptdesTagesLink();
+                    progressBarAnimating = false; // Animation ist abgeschlossen
+                });
+            }
         }, loopTime);
-    }, 100);
+    }, 1000);
 }
 
 
+/*  OLD CODE
 
-
-
-
-
-
-
-
-/* OLD CODE */
-
-
-// let progressBarAnimating = false;
-// // let intervalID;
-
-// function animateProgressBar(callback) {
-//     if (progressBarAnimating) {
-//         return; // Do nothing if animation is already in progress
-//     }
-    
-//     progressBarAnimating = true;
-
-//     const bar = document.getElementById('progressBar');
-//     bar.style.display = 'flex';
-//     let width = 1;
-//     let id = setInterval(() => {
-//         if (document.visibilityState !== "visible") {
-//             clearInterval(id);
-//             progressBarAnimating = false;
-//             return;
-//         }
-//         if (width >= 100) {
-//             width = 1;
-//             clearInterval(id);
-//             progressBarAnimating = false;
-//             if (callback) {
-//                 callback();
-//             }
-//         } else {
-//             width += 1;  // Increase width by 1%
-//             bar.style.width = width + '%';
-//         }
-//     }, (loopTime / 100));   // Adjust speed here
-// }
+animateProgressBar() wird mehrfach gestartet, wenn man das Fenster verlässt und
+wieder zurück kommt. Daher obige neue Version.
+Diese erzeugt leider in FireFox eine unerwünschte Pause!
 
 // function startIntervalFunctions() {
-//     if (!document.hidden && !progressBarAnimating) {
+//     setTimeout(() => {
 //         intervalID = setInterval(() => {
 //             animateProgressBar(() => {
 //                 changeRezeptdesTagesText();
@@ -477,59 +360,7 @@ function startIntervalFunctions() {
 //                 changeRezeptdesTagesLink();
 //             });
 //         }, loopTime);
-//     }
+//     }, 1000);
 // }
 
-// document.addEventListener("visibilitychange", () => {
-//     if (document.visibilityState === "visible") {
-//         startIntervalFunctions();
-//     } else {
-//         clearInterval(intervalID);
-//     }
-// });
-
-// window.addEventListener("load", startIntervalFunctions);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Very old code */ 
-
-// function animateProgressBar(callback) {
-//     const bar = document.getElementById('progressBar');
-//     bar.style.display = 'flex';
-//     let width = 1;
-//     let id = setInterval(() => {
-//         console.log(width);
-//         if (document.visibilityState !== "visible") {
-//             console.log("visible");
-//             bar.style.width = '0px';
-//             clearInterval(id);
-//             return;
-//         }
-//         if (width >= 100) {
-//             console.log("clearinterval");
-//             width = 1;
-//             clearInterval(id);
-//             if (callback) {
-//                 callback();
-//             }
-//         } else {
-//             width = width + 1;  // 0.5
-//             bar.style.width = width + '%';
-//         }
-//     }, (loopTime / 100));   // 200
-// }
-
+*/
