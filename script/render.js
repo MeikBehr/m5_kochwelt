@@ -51,10 +51,10 @@ function headerHTML() {
             <div id="mobile-nav-button" alt="Button für Menu">
                 <div id="mobile-nav-content">  
                     <ul id="mobile-nav-list">
-                        <li><a href="./index.html">Start</a></li>
-                        <li><a href="./recipe.html">Rezept des Tages</a></li>
-                        <li><a href="#" id="linkToContactForm" onclick="showContactOverlay()">Kontakt</a></li>
-						<li><a href="#">Impressum</a></li>
+                        <li class="mobile-nav-li"><a href="./index.html">Start</a></li>
+                        <li class="mobile-nav-li"><a href="./recipe.html">Rezept des Tages</a></li>
+                        <li class="mobile-nav-li"><a href="#" id="linkToContactForm" onclick="showContactOverlay()">Kontakt</a></li>
+						<li class="mobile-nav-li"><a href="#">Impressum</a></li>
                       </ul>
                 </div>
             </div>

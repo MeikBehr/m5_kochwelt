@@ -267,6 +267,9 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
     min-height: calc(100dvh - var(--footerHeight)  - var(--headerHeight) - 4rem);
+    line-height: 1.5rem;
+    word-break: break-all;
+    word-wrap: break-word;
 }
 
 
@@ -275,20 +278,31 @@
     font-size: 1.75rem;
 }
 
+.privacy__container h1 {
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
 
 .privacy h2 {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
 }
 
 
 .privacy h3 {
     font-size: 1.125rem;
 }
+.privacy__container h3 {
+    line-height: 1.5rem;
+}
 
 
 .privacy a {
-    color: var(--fontColorMain);
+    color: var(--green);
 }
 
 
@@ -297,25 +311,20 @@
     color: var(--green);
 }
 
-.privacy p {
-    line-height: 1.25rem;
-}
-
 
 .privacy hr {
-    margin-top: 2rem; 
+    margin-top: 1rem; 
     margin-bottom: 1rem
 }
 
 
-#progressBar {
-    display: none;
-    margin-top: 0.5rem;
-    height: 0.5rem;
-    width: 0px;
-    border-radius: 0.25rem;
-    background-color: var(--green);
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+.privacy__container p {
+    line-height: 1.55rem;
+}
+
+
+.privacy__ul {
+    padding-left: 1.25rem;
 }
 
 
@@ -328,6 +337,16 @@
     transition: opacity 0.35s ease-in-out;
 }
 
+
+#progressBar {
+    display: none;
+    margin-top: 0.5rem;
+    height: 0.5rem;
+    width: 0px;
+    border-radius: 0.25rem;
+    background-color: var(--green);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
 
 
 /* ========== U E B E R   U N S  ========== */
@@ -422,6 +441,7 @@
     margin-left: var(--marginLRContent);
     margin-right: var(--marginLRContent);
 }
+
 
 .contentHeight {
     padding-top: var(--marginTBContent);

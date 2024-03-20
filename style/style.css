@@ -308,14 +308,14 @@ button {
 }
 
 
-li:hover {
+.mobile-nav-li:hover {
     display: inline-block;
     background-color: #f0f0f0;
     background-color: var(--green);
 }
 
 
-li:hover a {
+.mobile-nav-li:hover a {
     transition: color 150ms ease-in-out, border-bottom 150ms ease-in-out;
     color: var(--fontColorHover);
     border-bottom: 4px solid var(--fontColorHover);
