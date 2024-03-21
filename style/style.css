@@ -119,6 +119,11 @@ body {
 }
 
 
+#main {
+    min-height: calc(100dvh - var(--headerHeight) - var(--footerHeight));
+}
+
+
 a {
     text-decoration: none;
     cursor: pointer;
