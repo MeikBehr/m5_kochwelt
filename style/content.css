@@ -202,7 +202,6 @@
 }
 
 
-
 /* ========== I M P R E S S U M ========== */
 
 
@@ -278,6 +277,7 @@
     font-size: 1.75rem;
 }
 
+
 .privacy__container h1 {
     padding-bottom: 1rem;
     font-size: 2rem;
@@ -296,6 +296,8 @@
 .privacy h3 {
     font-size: 1.125rem;
 }
+
+
 .privacy__container h3 {
     line-height: 1.5rem;
 }

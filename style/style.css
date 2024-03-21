@@ -16,12 +16,13 @@ https://codepen.io/stephenpaton-tech/full/JjRvGmY
     scrollbar-width: thin;
     scrollbar-color: var(--green) white;
   }
-  
+
+
 /* Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
     width: 16px;
 }
-  
+
 
 *::-webkit-scrollbar-track {
     background: #c0c0c0;
@@ -320,10 +321,6 @@ button {
     color: var(--fontColorHover);
     border-bottom: 4px solid var(--fontColorHover);
 }
-
-
-
-
 
 
 /*  =======================  F O O T E R  ======================= */

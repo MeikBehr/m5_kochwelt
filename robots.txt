@@ -1,13 +1,13 @@
 User-agent: UniversalRobot/1.0
 User-agent: *
-Disallow: /img/
 Disallow: /fonts/
+Disallow: /img/
 Disallow: /script/
 Disallow: /style/
-Disallow: /recipe.html
+Disallow: /datenschutz.html
+Disallow: /impressum.html
 Disallow: /recipe_anton.html
 Disallow: /recipe_meik.html
 Disallow: /recipe_oliver.html
 Disallow: /send_mail.html
-Disallow: /datenschutz.html
-Disallow: /impressum.html
+Disallow: /ueber_uns.html

@@ -29,7 +29,6 @@
         height: 12rem;
         width: 12rem;
     }
-
 }
 
 
@@ -70,7 +69,6 @@
     .header__nav {
         font-size: 1rem;
     }
-
 }
 
 
@@ -85,12 +83,9 @@
         --marginLRContent: 2rem;
     }
 
-
     .choose-recipe__links__container p {
         font-size: 0.9rem;
     }
-
-
 }
 
 
@@ -110,6 +105,9 @@
 
     .mobile-nav-show {
         display: flex;
+        justify-content: flex-end;
+        width: 2rem;
+        cursor: pointer;
     }
 
     .mobile-nav-show:hover #mobile-nav-content {
@@ -159,7 +157,6 @@
     .main__info-headline {
         padding-bottom: 1.5rem;
     }
-
 }
 
 
@@ -234,7 +231,6 @@
     .recipe__table__amount {
         vertical-align: top;
     }
-
 }
 
 
@@ -312,7 +308,6 @@
         height: 12rem;
         width: 12rem;
     }
-
 }
 
 
@@ -381,7 +376,6 @@
     .privacy h1 {
         font-size: 1.5rem;
     }
-
 }
 
 
@@ -390,5 +384,4 @@
     .ueber-uns h2 {
         padding-bottom: 2rem;
     }
-
 }

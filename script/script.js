@@ -1,5 +1,6 @@
 "use strict";
 
+
 /**
  * Initializes the application.
  * Renders the header, footer, and head content. Starts interval functions if the main parameter is true. Sets event listeners.
@@ -99,7 +100,7 @@ function hideOverlay() {
  * This function will send an email to formspree, using the data from the contact-form
  * @param {*} event 
  */
-function sendMail(event){﻿
+function sendMail(event){
     event.preventDefault();
     const data = new FormData(event.target);
     fetch("https://formspree.io/f/mjvnebjr", {
@@ -264,18 +265,16 @@ function changeRezeptdesTages() {
 
 
 /**
- * This function changes the links in the HTML elements with the IDs 'linkChange' and 'linkChange2'.
+ * This function changes the links in the HTML elements with the IDs 'linkChange' till 'linkChange4'.
  */
 function changeRezeptdesTagesLink() {
-    const container = document.getElementById('linkChange');
-    const container2 = document.getElementById('linkChange2');
-    const container3 = document.getElementById('linkChange3');
-    const container4 = document.getElementById('linkChange4');
     const recipeHref = changeRecipe();
-    container.href = recipeHref;
-    container2.href = recipeHref;
-    container3.href = recipeHref;
-    container4.href = recipeHref;
+    ['linkChange', 'linkChange2', 'linkChange3', 'linkChange4'].forEach(id => {
+        const container = document.getElementById(id);
+        if (container) {
+            container.href = recipeHref;
+        }
+    });
 }
 
 

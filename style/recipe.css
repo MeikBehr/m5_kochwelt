@@ -116,7 +116,8 @@
     flex: 0 0 auto;
     padding-right: 0.5rem;
 }
-  
+
+
 .recipe__input {
     flex: 0 0 9rem;
     height: 2rem;
@@ -225,9 +226,11 @@
     background-image: url(../img/author_meik.jpg);
 }
 
+
 .recipe__author-img__anton {
     background-image: url(../img/profile-img-anton-64px-64px.png);
 }
+
 
 .recipe__author-img__oliver {
     background-image: url(../img/autor_oliver.jpg);
