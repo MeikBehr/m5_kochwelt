@@ -385,4 +385,3 @@ function adjustForBrowser() {
         loopTime = 3000;
     }
 }
-
