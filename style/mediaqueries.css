@@ -1,5 +1,5 @@
 
-@media (max-width: 970px) {
+@media (max-width: 992px) {
 
     .main__info-container__content {
         flex-direction: column;
@@ -234,7 +234,7 @@
 }
 
 
-@media (max-width: 570px) {
+@media (max-width: 576px) {
 
     .main__dish-container {
         display: flex;
