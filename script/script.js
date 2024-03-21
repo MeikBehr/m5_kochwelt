@@ -270,10 +270,12 @@ function changeRezeptdesTagesLink() {
     const container = document.getElementById('linkChange');
     const container2 = document.getElementById('linkChange2');
     const container3 = document.getElementById('linkChange3');
+    const container4 = document.getElementById('linkChange4');
     const recipeHref = changeRecipe();
     container.href = recipeHref;
     container2.href = recipeHref;
     container3.href = recipeHref;
+    container4.href = recipeHref;
 }
 
 

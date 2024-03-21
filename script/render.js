@@ -52,7 +52,7 @@ function headerHTML() {
                 <div id="mobile-nav-content">  
                     <ul id="mobile-nav-list">
                         <li class="mobile-nav-li"><a href="./index.html">Start</a></li>
-                        <li class="mobile-nav-li"><a href="./recipe.html">Rezept des Tages</a></li>
+                        <li class="mobile-nav-li"><a id="linkChange4" href="./recipe_anton.html">Rezept des Tages</a></li>
                         <li class="mobile-nav-li"><a href="#" id="linkToContactForm" onclick="showContactOverlay()">Kontakt</a></li>
 						<li class="mobile-nav-li"><a href="#">Impressum</a></li>
                       </ul>
