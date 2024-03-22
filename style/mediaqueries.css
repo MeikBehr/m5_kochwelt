@@ -48,6 +48,10 @@
         align-items: center;
         gap: 1rem;
     }
+
+    .footer__nav_socialMedia {
+        margin-left: 0;
+    }
 }
 
 
