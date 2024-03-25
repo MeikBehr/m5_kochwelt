@@ -83,10 +83,10 @@ function footerHTML() {
 			<a href="./ueber_uns.html">Über uns</a>
 		</section>
 		<section class="footer__nav_socialMedia">
-			<a href="https://www.facebook.com/?lang=de">
+			<a href="https://www.facebook.com/?lang=de" target="_blank">
 				<div class="footer__nav__facebook footer__nav_socialMedia__icons" role="img" alt="Logo Facebook"></div>
 			</a>
-			<a href="https://twitter.com/?lang=de">
+			<a href="https://twitter.com/?lang=de" target="_blank">
 			<div class="footer__nav__twitter footer__nav_socialMedia__icons" role="img" alt="Logo Twitter / X"></div>
 			</a>
 		</section>
