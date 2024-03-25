@@ -159,7 +159,6 @@ function iterateThroughAllIngredientsAndChangeValues(actualAmounts, originalAmou
  */
 function checkIfInputIsElementOfAllowedPortions(newPortionsValue) {
     if (!allowedPortions.includes(newPortionsValue)) {
-		console.log('Does not include ', newPortionsValue);
 		return false;
 	}
     return true;
