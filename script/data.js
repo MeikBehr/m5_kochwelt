@@ -20,3 +20,5 @@ let imgIndex = 1,
     recipeTitleIndex = 1;
 
 let intervalID;
+
+const allowedPortions = [1,2,3,4,5,6,7,8,9,10];

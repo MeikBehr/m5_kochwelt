@@ -153,13 +153,28 @@ function iterateThroughAllIngredientsAndChangeValues(actualAmounts, originalAmou
 
 
 /**
+ * This functions checks, if newPortion is an Element of the (Number)-Array allowedPortions. It returns true, if Element of, else returns false and stops the updateIngredients-function
+ * @param {number} newPortionsValue 
+ * @returns {boolean}
+ */
+function checkIfInputIsElementOfAllowedPortions(newPortionsValue) {
+    if (!allowedPortions.includes(newPortionsValue)) {
+		console.log('Does not include ', newPortionsValue);
+		return false;
+	}
+    return true;
+}
+
+
+/**
  * This function checks, if the value of the inputfield is between 1 and 20. If so, it calculates the new amount of 
  * ingredients  and updates the data-original-amount with the value from the input field for further calculations.
  */
 function updateIngredients() {
-	let newPortionsValue = document.getElementById("recipe__input").value;
-	checkIfInputIsEmpty(newPortionsValue);
-    if (newPortionsValue > 0 && newPortionsValue <= 20) {
+	let newPortionsValue = +document.getElementById("recipe__input").value;
+    checkIfInputIsEmpty(newPortionsValue);
+    if (newPortionsValue > 0 && newPortionsValue <= 20 
+        && checkIfInputIsElementOfAllowedPortions(newPortionsValue)) {
         const actualAmounts = document.querySelectorAll('.recipe__table__amount');
         const table = document.querySelector('.recipe__table');
         const originalAmount = parseFloat(table.getAttribute('data-original-amount'));
