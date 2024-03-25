@@ -74,14 +74,14 @@
     padding: 0.75rem 3.75rem;
     color: var(--buttonColor);
     background-color: var(--green);
-    transition: background-color 150ms ease-in-out;
+    transition: background-color 125ms ease-in-out;
     box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
 }
 
 
 .main__dish-btn:hover {
     color: var(--buttonColor);
-    transition: background-color 150ms ease-in-out;
+    transition: background-color 125ms ease-in-out;
     background-color: var(--buttonBackgroundcolorHover);
 }
 
@@ -210,8 +210,6 @@
     flex-direction: column;
     justify-content: center;
     padding: 1rem var(--marginLRContent);
-    margin-top: 2rem;
-    margin-bottom: 2rem;
     min-height: calc(100dvh - var(--footerHeight)  - var(--headerHeight) - 4rem);
 }
 
