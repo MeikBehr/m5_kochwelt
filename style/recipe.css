@@ -9,7 +9,6 @@
 
 .recipe__main {
     padding: 0 var(--marginLRContent);
-    min-width: calc(100% - var(--marginLRContent));
 }
 
 

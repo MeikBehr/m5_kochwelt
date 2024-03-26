@@ -21,10 +21,14 @@
 
     <body onload="init()">
         <div class="mainframe">
-            <header id="header" class="header"></header>
+
+			<section class="header__container">
+				<header id="header" class="header contentContainer">
+				</header>
+			</section>
 
             <main id="main">
-                <div class="privacy">
+                <div class="privacy contentContainer">
                     <div class="privacy__container">
                         <h1>Datenschutzerklärung</h1>
                         <p>Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutzgrundverordnung (DSGVO), ist:</p>
@@ -171,7 +175,10 @@
                 </div>
             </main>
 
-            <footer id="footer" class="footer"></footer>
+			<section class="footer__container">
+				<footer id="footer" class="footer contentContainer">
+				</footer>
+			</section>
         </div>
 
         <section id="contact__overlay" class="d-none">

@@ -219,7 +219,8 @@
 .impressum {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    margin-top: 4rem;
     padding: 1rem var(--marginLRContent);
     min-height: calc(100dvh - var(--footerHeight)  - var(--headerHeight) - 4rem);
 }
