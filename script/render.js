@@ -25,42 +25,41 @@ function headHTML() {
 
 function headerHTML() {
     return /*html*/ `
-    <figure class="header__logo__container">
-		<a href="./index.html">
-			<img class="header__logo" src="./img/logo.png" alt="Logo Kochwelt: Eine Kochmütze">
-		</a>
-	</figure>
-	<nav class="header__nav">
-		<div class="nav-mobile-hidden">
-			<div>
-				<a href="./index.html">Start</a>
+		<figure class="header__logo__container">
+			<a href="./index.html">
+				<img class="header__logo" src="./img/logo.png" alt="Logo Kochwelt: Eine Kochmütze">
+			</a>
+		</figure>
+		<nav class="header__nav">
+			<div class="nav-mobile-hidden">
+				<div>
+					<a href="./index.html">Start</a>
+				</div>
+				<div>
+					<a id="linkChange3" href="./recipe_anton.html">Rezept des Tages</a>
+				</div>
+				<div>
+					<a id="linkToContactForm" onclick="showContactOverlay()">Kontakt</a>
+				</div>
+				<div>
+					<a href="./impressum.html">Impressum</a>
+				</div>
 			</div>
-			<div>
-				<a id="linkChange3" href="./recipe_anton.html">Rezept des Tages</a>
-			</div>
-			<div>
-				<a id="linkToContactForm" onclick="showContactOverlay()">Kontakt</a>
-			</div>
-			<div>
-				<a href="./impressum.html">Impressum</a>
-			</div>
-		</div>
 
-		<!-- Navigationsleiste für MOBILE Geräte -->
-		<div class="mobile-nav-show" type="radio">
-            <div id="mobile-nav-button" alt="Button für Menu">
-                <div id="mobile-nav-content">  
-                    <ul id="mobile-nav-list">
-                        <li class="mobile-nav-li"><a href="./index.html">Start</a></li>
-                        <li class="mobile-nav-li"><a id="linkChange4" href="./recipe_anton.html">Rezept des Tages</a></li>
-                        <li class="mobile-nav-li"><a href="#" id="linkToContactForm" onclick="showContactOverlay()">Kontakt</a></li>
-						<li class="mobile-nav-li"><a href="./impressum.html">Impressum</a></li>
-                      </ul>
-                </div>
-            </div>
-        </div>
-
-	</nav>
+			<!-- Navigationsleiste für MOBILE Geräte -->
+			<div class="mobile-nav-show" type="radio">
+				<div id="mobile-nav-button" alt="Button für Menu">
+					<div id="mobile-nav-content">  
+						<ul id="mobile-nav-list">
+							<li class="mobile-nav-li"><a href="./index.html">Start</a></li>
+							<li class="mobile-nav-li"><a id="linkChange4" href="./recipe_anton.html">Rezept des Tages</a></li>
+							<li class="mobile-nav-li"><a href="#" id="linkToContactForm" onclick="showContactOverlay()">Kontakt</a></li>
+							<li class="mobile-nav-li"><a href="./impressum.html">Impressum</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
     `;
 }
 

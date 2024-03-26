@@ -86,11 +86,22 @@
 }
 
 
+.choose-recipe {
+    background-color: var(--grey_dark);
+}
+
+
 .choose-recipe__container {
     display: flex;
     flex-direction: column;
     padding: 4.5rem var(--marginLRContent) 4.5rem var(--marginLRContent);
     background-color: var(--grey_dark);
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
 }
 
 

@@ -112,9 +112,16 @@ body {
     margin-bottom: 0px;
     margin-left: auto;
     width: 100%;
-    max-width: 1440px;
     background-color: var(--backgroundColorMain);
-    box-shadow: 0px 5px 5px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.contentContainer {
+    max-width: 1440px;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
 }
 
 
@@ -214,13 +221,17 @@ button {
 /*  =======================  H E A D E R  ======================= */
 
 
+.header__container {
+    box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.1);
+}
+
+
 .header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     height: var(--headerHeight);
-    box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.1);
 }
 
 
@@ -363,6 +374,11 @@ button {
 
 
 /*  =======================  F O O T E R  ======================= */
+
+
+.footer__container {
+    background-color: var(--footer_background);
+}
 
 
 .footer {
